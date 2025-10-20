@@ -23,11 +23,19 @@
     &:first-child {
       border-radius: var.$border-radius-big var.$border-radius-big 0 0;
       border-bottom: 2px dashed #E5E7EB;
+      @include mixins.breakpoint('tablet') {
+        border-radius: 0;
+      }
     }
 
     &:last-child {
       border-radius: 0 0 var.$border-radius-big var.$border-radius-big;
+      @include mixins.breakpoint('tablet') {
+        border-radius: 0;
+      }
     }
+
+
 
     @include mixins.breakpoint('mobile') {
       padding: 1rem 0;

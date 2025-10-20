@@ -7,15 +7,27 @@
         </button>
         <div class="modal__inner">
             <div class="modal__title">Modal title</div>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consectetur
-            culpa cumque delectus, dolore earum et fuga iusto laborum maxime modi, nemo nobis quas
-            quasi saepe sed, similique vero voluptatum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur beatae commodi consequuntur cumque, dolore eveniet in laborum libero molestiae necessitatibus non obcaecati pariatur perspiciatis. Beatae mollitia quaerat quas quasi reiciendis.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consectetur
-            culpa cumque delectus, dolore earum et fuga iusto laborum maxime modi, nemo nobis quas
-            quasi saepe sed, similique vero voluptatum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur beatae commodi consequuntur cumque, dolore eveniet in laborum libero molestiae necessitatibus non obcaecati pariatur perspiciatis. Beatae mollitia quaerat quas quasi reiciendis.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consectetur
-            culpa cumque delectus, dolore earum et fuga iusto laborum maxime modi, nemo nobis quas
-            quasi saepe sed, similique vero voluptatum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur beatae commodi consequuntur cumque, dolore eveniet in laborum libero molestiae necessitatibus non obcaecati pariatur perspiciatis. Beatae mollitia quaerat quas quasi reiciendis.
+            <form class="form">
+                <input type="hidden" name="type" value="form">
+                <input type="hidden" name="form_id" value="callback">
+                <input type="hidden" name="form_name" value="Callback">
+                <label>
+                    <input class="form__input" type="text" name="name" placeholder="Name"/>
+                </label>
+                <label>
+                    <input class="form__input" type="tel" name="phone" placeholder="Phone">
+                </label>
+                <label>
+                    <input class="form__input" type="email" name="email" placeholder="Email">
+                </label>
+                <label>
+                    <textarea class="form__input" name="message" cols="30" rows="5" placeholder="Additional info"></textarea>
+                </label>
+                <label class="form__checkbox-label">
+                    <input class="form__checkbox"  type="checkbox" name="agree"/><span>I agree to the <a href="#">Terms of Service</a></span>
+                </label>
+                <button type="submit" class="form__submit-button simple-button simple-button_light">Send</button>
+            </form>
         </div>
     </div>
 </div>
