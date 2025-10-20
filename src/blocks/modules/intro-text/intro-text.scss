@@ -1,0 +1,39 @@
+@use "src/styles/helpers/mixins";
+@use "src/styles/helpers/variables" as var;
+
+.intro-text {
+  background-color: var.$color-content-background;
+  padding: 6rem 0;
+
+  .header-2 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 4rem;
+    margin-top: 3rem;
+    justify-content: center;
+
+    @include mixins.breakpoint('mobile') {
+      flex-direction: column;
+    }
+  }
+
+  .button {
+    min-width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}

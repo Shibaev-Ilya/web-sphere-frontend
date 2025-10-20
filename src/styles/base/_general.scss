@@ -1,0 +1,259 @@
+@use 'src/styles/helpers/mixins';
+@use 'src/styles/helpers/variables' as var;
+
+h1, h2, h3, h4, h5, h6, ul, ol, p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
+}
+
+*::selection {
+  background-color: var.$color-accent-dark;
+}
+
+html {
+  font-size: clamp(4px, 0.52083vw, 10px);
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+  scrollbar-color: var.$color-text var.$color-light;
+
+  @include mixins.breakpoint('tablet') {
+    font-size: clamp(4px, 0.97656vw, 10px);
+  }
+
+  @include mixins.breakpoint('mobile') {
+    font-size: clamp(4px, 2vw, 10px);
+  }
+}
+
+body {
+  font-family: var.$font-family;
+  color: var.$color-text;
+  font-weight: 400;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 5rem;
+  background-color: var.$color-content-background;
+  background-image: linear-gradient(rgba(#adadad, 0.1) 2px, transparent 2px),
+  linear-gradient(90deg, rgba(#adadad, 0.1) 2px, transparent 2px);
+  background-size: 4rem 4rem;
+  overflow-x: hidden;
+
+  @media (max-width: 1440px) {
+    background-size: 2vw 2vw;
+  }
+  @media (max-width: 1024px) {
+    background-size: 4.5vw 4.5vw;
+  }
+  @media (max-width: 768px) {
+    background-size: 6vw 6vw;
+  }
+  @media (max-width: 475px) {
+    background-size: 7.5vw 7.5vw;
+  }
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  max-width: var.$max-site-width;
+  overflow: hidden;
+  margin: 9rem auto 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  width: 100%;
+  padding: 0 2rem;
+  max-width: 148rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.header-1 {
+  font-family: var.$second-family;
+  font-size: 5.4rem;
+  font-weight: 600;
+  line-height: 150%;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+
+  @include mixins.breakpoint('tablet') {
+    font-size: 4.6rem;
+  }
+}
+
+.header-2 {
+  font-family: var.$second-family;
+  font-size: 4.2rem;
+  font-weight: 600;
+  line-height: 150%;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-bottom: 3rem;
+  display: block;
+
+  @include mixins.breakpoint('tablet') {
+    font-size: 3.8rem;
+  }
+
+  @include mixins.breakpoint('mobile') {
+    font-size: 3.4rem;
+  }
+}
+
+.header-3 {
+  font-family: var.$second-family;
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 150%;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+
+  @include mixins.breakpoint('mobile') {
+    font-size: 2.4rem;
+  }
+}
+
+.simple-link {
+  box-sizing: border-box;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform-origin: center;
+  }
+
+  &::before {
+    border-top: 1px solid var.$color-text;
+    border-bottom: 1px solid var.$color-text;
+    transform: scale3d(0, 1, 1);
+  }
+
+  &::after {
+    border-left: 1px solid var.$color-text;
+    border-right: 1px solid var.$color-text;
+    transform: scale3d(1, 0, 1);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    transform: scale3d(1, 1, 1);
+    transition: transform 900ms;
+  }
+}
+
+.button {
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem 3rem;
+  border: 1px solid var.$color-text;
+  transition: 0.4s;
+  text-decoration: none;
+  color: var.$color-text;
+  border-radius: var.$border-radius-small;
+  box-shadow: 0 4px 0 0 var.$color-text;
+  background-color: #ffffff;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:hover {
+    transform: translate(0, -2px);
+    color: var.$color-text;
+    box-shadow: 0 6px 0 0 var.$color-text;
+    border-color: var.$color-text;
+  }
+
+  &:active {
+    transform: translate(0, 4px);
+    color: var.$color-text;
+    box-shadow: none;
+    border-color: var.$color-text;
+  }
+
+  &:visited {
+    color: var.$color-text;
+    border-color: var.$color-text;
+  }
+}
+
+.simple-button {
+  font-size: 1.4rem;
+  padding: 1rem 2rem;
+  background-color: var.$color-text;
+  color: var.$color-light;
+  border-radius: var.$border-radius-small;
+  text-transform: uppercase;
+  width: fit-content;
+  height: fit-content;
+
+  @include mixins.breakpoint('tablet') {
+    font-size: 2.4rem;
+  }
+
+  &:hover {
+    background-color: var.$color-accent-dark-d10;
+  }
+}
+
+.brand-color {
+  color: var.$color-accent-dark-d10;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  transition: all var.$transition;
+}
+
+a {
+  text-decoration: none;
+  color: var.$color-text;
+}
+
+input,
+button,
+textarea,
+fieldset {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font-family: inherit;
+}
+
+textarea {
+  resize: vertical;
+}

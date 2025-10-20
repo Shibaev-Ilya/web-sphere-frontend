@@ -1,0 +1,14 @@
+.idea
+.vscode
+
+.env
+node_modules
+.yarn
+.yarnrc.yml
+yarn.lock
+.github
+ehthumbs.db
+Thumbs.db
+_config.yml
+
+/dist/

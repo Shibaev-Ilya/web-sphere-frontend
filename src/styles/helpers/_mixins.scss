@@ -1,0 +1,25 @@
+@use 'sass:map';
+
+$breakpoints: (
+        "tablet": 1024px,
+        "mobile": 500px
+);
+
+@mixin breakpoint($point) {
+  $size: map.get($breakpoints, $point);
+  @if $size {
+    @media (max-width: $size) {
+      @content;
+    }
+  } @else {
+    @error "No value found for '#{$point}' in breakpoints map.";
+  }
+}
+
+@mixin custom-border($radius: 16px, $color: #141414) {
+  border-radius: $radius;
+  border-top: 1px solid $color;
+  border-right: 1px solid $color;
+  border-bottom: 1px solid $color;
+  border-left: 15px solid $color;
+}

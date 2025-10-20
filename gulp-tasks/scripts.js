@@ -1,0 +1,38 @@
+"use strict";
+
+import { paths } from "../gulpfile.babel";
+import webpack from "webpack";
+import webpackStream from "webpack-stream";
+import gulp from "gulp";
+import babel from "gulp-babel";
+import rename from "gulp-rename";
+import browsersync from "browser-sync";
+import debug from "gulp-debug";
+import yargs from "yargs";
+
+const webpackConfig = require("../webpack.config.js"),
+    argv = yargs.argv,
+    production = !!argv.production;
+
+webpackConfig.mode = production ? "production" : "development";
+webpackConfig.devtool = production ? false : "source-map";
+
+gulp.task("scripts", () => {
+    return gulp.src(paths.scripts.src)
+        .pipe(webpackStream(webpackConfig), webpack)
+        .pipe(gulp.dest(paths.scripts.dist))
+        .pipe(debug({
+            "title": "JS files"
+        }))
+        .pipe(browsersync.stream());
+});
+
+gulp.task("separated-scripts", () => {
+    return gulp.src(paths["separated-scripts"]["src"])
+        .pipe(babel())
+        .pipe(gulp.dest(paths["separated-scripts"]["dist"]))
+        .pipe(debug({
+            "title": "Separated JS files"
+        }))
+        .pipe(browsersync.stream());
+});
