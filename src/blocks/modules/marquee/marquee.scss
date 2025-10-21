@@ -2,7 +2,6 @@
 @use "src/styles/helpers/variables" as var;
 
 .marquee {
-  background-color: var.$color-content-background;
   padding: 5rem 0;
 
   .container {

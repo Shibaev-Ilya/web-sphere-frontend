@@ -10,8 +10,9 @@ $color-accent-dark-d10: color.adjust($color-accent-dark, $lightness: -10%);
 $color-text: #141414;
 $color-text-light: #F9FAFB;
 
-
 $color-content-background: #F4F4F4;
+$bg-gradient: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, $color-content-background 9%, $color-content-background 91%, rgba(255, 255, 255, 0) 100%);
+
 $color-header-background: $color-light;
 $color-footer-background: $color-text;
 

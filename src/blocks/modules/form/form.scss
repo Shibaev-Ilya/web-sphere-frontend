@@ -2,9 +2,9 @@
 @use "src/styles/helpers/variables" as var;
 
 .form-section {
-  padding: 4rem 0;
+  padding: 8rem 0;
   position: relative;
-  background-color: var.$color-content-background;
+  background-image: var.$bg-gradient;
 
   .header-2 {
     margin-bottom: 1rem;
