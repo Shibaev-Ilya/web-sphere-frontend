@@ -12,11 +12,6 @@ function createSphereStructure() {
         for (let spokeNum = 1; spokeNum <= 36; spokeNum++) {
             const spoke = document.createElement("div");
             spoke.className = `spoke spoke-${spokeNum}`;
-
-            const dot = document.createElement("div");
-            dot.className = "dot";
-
-            spoke.appendChild(dot);
             plane.appendChild(spoke);
         }
 

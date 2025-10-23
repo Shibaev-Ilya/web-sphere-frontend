@@ -24,6 +24,7 @@
   }
 
   &__text-block {
+    z-index: 1;
     @include mixins.breakpoint('mobile') {
       position: absolute;
       left: 2rem;
@@ -93,18 +94,20 @@
   height: 20rem;
   width: 0;
   z-index: 10;
-}
 
-.dot {
-  position: absolute;
-  width: 0.7rem;
-  height: 0.7rem;
-  border-radius: 50%;
-  background: var.$color-text;
-  left: -0.3rem;
-  top: 100%;
-  transform: rotateX(90deg);
-  z-index: 10;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background: var.$color-text;
+    left: -0.3rem;
+    top: 100%;
+    transform: rotateX(90deg);
+    z-index: 10;
+
+  }
 }
 
 @for $i from 1 through 36 {
@@ -122,8 +125,8 @@
 @for $i from 0 through 18 {
   $delay: $i * 0.05555556s;
 
-  .spoke-#{$i} .dot,
-  .spoke-#{36 - $i} .dot {
+  .spoke-#{$i}:before,
+  .spoke-#{36 - $i}:before {
     animation: pulsate 1s infinite #{$delay} alternate both;
   }
 }
@@ -148,7 +151,7 @@
 
 @keyframes pulsate {
   0% {
-    transform: rotateX(90deg) scale(0.5) translateZ(2rem);
+    transform: rotateX(90deg) scale(0.6) translateZ(3rem);
   }
   100% {
     transform: rotateX(90deg) scale(1) translateZ(0);
