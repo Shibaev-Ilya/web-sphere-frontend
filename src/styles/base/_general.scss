@@ -1,5 +1,4 @@
-@use 'src/styles/helpers/mixins';
-@use 'src/styles/helpers/variables' as var;
+@use 'src/styles/helpers/index' as *;
 
 h1, h2, h3, h4, h5, h6, ul, ol, p {
   margin: 0;
@@ -11,7 +10,7 @@ h1, h2, h3, h4, h5, h6, ul, ol, p {
   box-sizing: border-box;
 
   &::selection {
-    background-color: var.$color-accent-dark;
+    background-color: $color-accent-dark;
   }
 }
 
@@ -19,27 +18,27 @@ html {
   font-size: clamp(4px, 0.52083vw, 10px);
   scroll-behavior: smooth;
   scrollbar-gutter: stable;
-  scrollbar-color: var.$color-text var.$color-light;
+  scrollbar-color: $color-text $color-light;
 
-  @include mixins.breakpoint('tablet') {
+  @include breakpoint('tablet') {
     font-size: clamp(4px, 0.97656vw, 10px);
   }
 
-  @include mixins.breakpoint('mobile') {
+  @include breakpoint('mobile') {
     font-size: clamp(4px, 2vw, 10px);
   }
 }
 
 body {
-  font-family: var.$font-family;
-  color: var.$color-text;
+  font-family: $font-family;
+  color: $color-text;
   font-weight: 400;
   font-size: 1.6rem;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   padding-bottom: 5rem;
-  background-color: var.$color-content-background;
+  background-color: $color-content-background;
   background-image: linear-gradient(rgba(#adadad, 0.1) 2px, transparent 2px),
   linear-gradient(90deg, rgba(#adadad, 0.1) 2px, transparent 2px);
   background-size: 4rem 4rem;
@@ -66,7 +65,7 @@ body {
 .main {
   flex: 1;
   width: 100%;
-  max-width: var.$max-site-width;
+  max-width: $max-site-width;
   overflow: hidden;
   margin: 9rem auto 0;
 }
@@ -91,20 +90,20 @@ body {
 }
 
 .header-1 {
-  font-family: var.$second-family;
+  font-family: $second-family;
   font-size: 5.4rem;
   font-weight: 600;
   line-height: 150%;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
 
-  @include mixins.breakpoint('tablet') {
+  @include breakpoint('tablet') {
     font-size: 4.6rem;
   }
 }
 
 .header-2 {
-  font-family: var.$second-family;
+  font-family: $second-family;
   font-size: 4.2rem;
   font-weight: 600;
   line-height: 150%;
@@ -113,24 +112,24 @@ body {
   margin-bottom: 3rem;
   display: block;
 
-  @include mixins.breakpoint('tablet') {
+  @include breakpoint('tablet') {
     font-size: 3.8rem;
   }
 
-  @include mixins.breakpoint('mobile') {
+  @include breakpoint('mobile') {
     font-size: 3.4rem;
   }
 }
 
 .header-3 {
-  font-family: var.$second-family;
+  font-family: $second-family;
   font-size: 2.8rem;
   font-weight: 600;
   line-height: 150%;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 
-  @include mixins.breakpoint('mobile') {
+  @include breakpoint('mobile') {
     font-size: 2.4rem;
   }
 }
@@ -152,14 +151,14 @@ body {
   }
 
   &::before {
-    border-top: 1px solid var.$color-text;
-    border-bottom: 1px solid var.$color-text;
+    border-top: 1px solid $color-text;
+    border-bottom: 1px solid $color-text;
     transform: scale3d(0, 1, 1);
   }
 
   &::after {
-    border-left: 1px solid var.$color-text;
-    border-right: 1px solid var.$color-text;
+    border-left: 1px solid $color-text;
+    border-right: 1px solid $color-text;
     transform: scale3d(1, 0, 1);
   }
 
@@ -175,66 +174,66 @@ body {
   text-align: center;
   font-size: 2rem;
   padding: 2rem 3rem;
-  border: 1px solid var.$color-text;
+  border: 1px solid $color-text;
   transition: 0.4s;
   text-decoration: none;
-  color: var.$color-text;
-  border-radius: var.$border-radius-small;
-  box-shadow: 0 4px 0 0 var.$color-text;
+  color: $color-text;
+  border-radius: $border-radius-small;
+  box-shadow: 0 4px 0 0 $color-text;
   background-color: #ffffff;
   cursor: pointer;
   text-transform: uppercase;
 
   &:hover {
     transform: translate(0, -2px);
-    color: var.$color-text;
-    box-shadow: 0 6px 0 0 var.$color-text;
-    border-color: var.$color-text;
+    color: $color-text;
+    box-shadow: 0 6px 0 0 $color-text;
+    border-color: $color-text;
   }
 
   &:active {
     transform: translate(0, 4px);
-    color: var.$color-text;
+    color: $color-text;
     box-shadow: none;
-    border-color: var.$color-text;
+    border-color: $color-text;
   }
 
   &:visited {
-    color: var.$color-text;
-    border-color: var.$color-text;
+    color: $color-text;
+    border-color: $color-text;
   }
 }
 
 .simple-button {
   font-size: 1.4rem;
   padding: 1rem 2rem;
-  background-color: var.$color-text;
-  color: var.$color-light;
-  border-radius: var.$border-radius-small;
+  background-color: $color-text;
+  color: $color-light;
+  border-radius: $border-radius-small;
   text-transform: uppercase;
   width: fit-content;
   height: fit-content;
 
-  @include mixins.breakpoint('tablet') {
+  @include breakpoint('tablet') {
     font-size: 2.4rem;
   }
 
   &:hover {
-    background-color: var.$color-accent-dark-d10;
+    background-color: $color-accent-dark-d10;
   }
 
   &_light {
-    background-color: var.$color-accent-dark-d10;
-    color: var.$color-light;
+    background-color: $color-accent-dark-d10;
+    color: $color-light;
 
     &:hover {
-      background-color: var.$color-accent-dark;
+      background-color: $color-accent-dark;
     }
   }
 }
 
 .brand-color {
-  color: var.$color-accent-dark-d10;
+  color: $color-accent-dark-d10;
 }
 
 .bold {
@@ -249,12 +248,12 @@ img {
 
 button {
   cursor: pointer;
-  transition: all var.$transition;
+  transition: all $transition;
 }
 
 a {
   text-decoration: none;
-  color: var.$color-text;
+  color: $color-text;
 }
 
 input,

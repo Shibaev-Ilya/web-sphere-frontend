@@ -1,8 +1,7 @@
-@use "src/styles/helpers/mixins";
-@use "src/styles/helpers/variables" as var;
+@use 'src/styles/helpers/index' as *;
 
 .intro-text {
-  background-image: var.$bg-gradient;
+  background-image: $bg-gradient;
   padding: 6rem 0;
 
   .header-2 {
@@ -19,7 +18,7 @@
     margin-top: 3rem;
     justify-content: center;
 
-    @include mixins.breakpoint('mobile') {
+    @include breakpoint('mobile') {
       flex-direction: column;
     }
   }

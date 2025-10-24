@@ -1,11 +1,10 @@
-@use "src/styles/helpers/mixins";
-@use "src/styles/helpers/variables" as var;
+@use 'src/styles/helpers/index' as *;
 
 .marquee {
   padding: 5rem 0;
 
   .container {
-    @include mixins.breakpoint('tablet') {
+    @include breakpoint('tablet') {
       padding: 0;
     }
   }
@@ -15,28 +14,28 @@
     display: flex;
     overflow: hidden;
     user-select: none;
-    background-color: var.$color-text;
+    background-color: $color-text;
     padding: 1rem 0;
     gap: 3rem;
 
     &:first-child {
-      border-radius: var.$border-radius-big var.$border-radius-big 0 0;
+      border-radius: $border-radius-big $border-radius-big 0 0;
       border-bottom: 2px dashed #E5E7EB;
-      @include mixins.breakpoint('tablet') {
+      @include breakpoint('tablet') {
         border-radius: 0;
       }
     }
 
     &:last-child {
-      border-radius: 0 0 var.$border-radius-big var.$border-radius-big;
-      @include mixins.breakpoint('tablet') {
+      border-radius: 0 0 $border-radius-big $border-radius-big;
+      @include breakpoint('tablet') {
         border-radius: 0;
       }
     }
 
 
 
-    @include mixins.breakpoint('mobile') {
+    @include breakpoint('mobile') {
       padding: 1rem 0;
     }
   }
@@ -62,7 +61,7 @@
     color: #fff;
     letter-spacing: 0.3rem;
 
-    @include mixins.breakpoint('mobile') {
+    @include breakpoint('mobile') {
       font-size: 1.6rem;
       line-height: 112%;
     }

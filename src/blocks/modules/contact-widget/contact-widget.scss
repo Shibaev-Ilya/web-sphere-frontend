@@ -1,8 +1,7 @@
-@use "src/styles/helpers/mixins";
-@use "src/styles/helpers/variables" as var;
+@use 'src/styles/helpers/index' as *;
 
 .contact-widget {
-  background-color: var.$color-light;
+  background-color: $color-light;
   position: fixed;
   display: flex;
   bottom: 1rem;
@@ -19,19 +18,19 @@
     width: 3.5rem;
     height: 3.5rem;
 
-    @include mixins.breakpoint("mobile") {
+    @include breakpoint("mobile") {
       width: 4.5rem;
       height: 4.5rem;
     }
 
     path {
-      fill: var.$color-text;
-      transition: fill var.$transition;
+      fill: $color-text;
+      transition: fill $transition;
     }
 
     &:hover {
       path {
-        fill: var.$color-accent-dark-d10;
+        fill: $color-accent-dark-d10;
       }
     }
   }
