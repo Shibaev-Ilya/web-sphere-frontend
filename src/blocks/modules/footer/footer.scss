@@ -1,31 +1,31 @@
-@use 'src/styles/helpers/mixins';
-@use 'src/styles/helpers/variables' as var;
-
+// @use 'src/styles/helpers/mixins';
+// @use 'src/styles/helpers/variables' as var;
+@use '../helpers/index' as *;
 .footer {
   padding: 3rem 0;
-  max-width: var.$max-site-width;
+  max-width: $max-site-width;
   width: 100%;
-  background-image: var.$bg-gradient;
+  background-image: $bg-gradient;
 
   a {
-    transition: color var.$transition;
+    transition: color $transition;
     &:hover {
-      color: var.$color-accent-dark;
+      color: $color-accent-dark;
     }
   }
 
   &__container {
     padding: 3rem;
-    background-color: var.$color-footer-background;
-    border-radius: var.$border-radius-big;
+    background-color: $color-footer-background;
+    border-radius: $border-radius-big;
 
-    @include mixins.breakpoint('mobile') {
+    @include breakpoint('mobile') {
       padding-top: 2rem;
       padding-bottom: 2rem;
     }
 
     * {
-      color: var.$color-light;
+      color: $color-light;
     }
   }
 
@@ -35,7 +35,7 @@
     align-items: center;
     margin-bottom: 2rem;
 
-    @include mixins.breakpoint('mobile') {
+    @include breakpoint('mobile') {
       flex-direction: column;
       gap: 4rem;
     }
@@ -47,7 +47,7 @@
     gap: 2rem;
     flex-wrap: wrap;
 
-    @include mixins.breakpoint('mobile') {
+    @include breakpoint('mobile') {
       width: 100%;
       justify-content: center;
       gap: 1rem;
@@ -59,7 +59,7 @@
     line-height: 120%;
     padding: 0.5rem 1rem;
 
-    @include mixins.breakpoint('mobile') {
+    @include breakpoint('mobile') {
       font-size: 1.6rem;
     }
   }
@@ -69,7 +69,7 @@
     justify-content: space-between;
     align-items: center;
 
-    @include mixins.breakpoint('mobile') {
+    @include breakpoint('mobile') {
       flex-direction: column-reverse;
       align-items: flex-start;
       gap: 3rem;
@@ -80,12 +80,12 @@
     display: flex;
     gap: 2rem;
 
-    @include mixins.breakpoint('mobile') {
+    @include breakpoint('mobile') {
       gap: 8rem;
     }
 
     a {
-      transition: var.$transition;
+      transition: $transition;
     }
   }
 
@@ -96,7 +96,7 @@
   &__logo-text {
     font-size: 2.6rem;
     line-height: 120%;
-    font-family: var.$second-family;
+    font-family: $second-family;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 0.3rem;
@@ -113,6 +113,6 @@
   }
 
   .simple-link:before, .simple-link:after {
-    border-color: var.$color-light;
+    border-color: $color-light;
   }
 }

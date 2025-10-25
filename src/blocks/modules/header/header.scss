@@ -1,26 +1,26 @@
-@use 'src/styles/helpers/mixins';
-@use 'src/styles/helpers/variables' as var;
-
+// @use 'src/styles/helpers/mixins';
+// @use 'src/styles/helpers/variables' as var;
+@use '../../../styles/helpers' as *;
 .header {
   font-weight: 600;
   line-height: 130%;
   letter-spacing: 0.06rem;
-  margin: var.$margin-container-alignment;
-  max-width: var.$max-site-width;
+  margin: $margin-container-alignment;
+  max-width: $max-site-width;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 9;
-  background-image: linear-gradient(180deg,var.$color-content-background 95%, rgba(0, 0, 0, 0) 100%);
+  background-image: linear-gradient(180deg,$color-content-background 95%, rgba(0, 0, 0, 0) 100%);
 
   &.light {
-    background: linear-gradient(180deg,rgba(var.$color-content-background, 0.8) 95%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(180deg,rgba($color-content-background, 0.8) 95%, rgba(0, 0, 0, 0) 100%);
     backdrop-filter: blur(10px);
   }
 
-  @include mixins.breakpoint('tablet') {
+  @include breakpoint('tablet') {
     height: 9.1rem;
   }
 
@@ -32,7 +32,7 @@
     padding-bottom: 1.2rem;
     overflow: hidden;
 
-    @include mixins.breakpoint('mobile') {
+    @include breakpoint('mobile') {
       padding: 1.2rem 0;
     }
   }
@@ -55,8 +55,8 @@
   &__logo-text {
     font-size: 1.6rem;
     letter-spacing: 0.3rem;
-    color: var.$color-text;
-    font-family: var.$second-family;
+    color: $color-text;
+    font-family: $second-family;
   }
 
   &__menu-wrap {
@@ -66,7 +66,7 @@
     gap: 1rem;
     height: 100%;
 
-    @include mixins.breakpoint('tablet') {
+    @include breakpoint('tablet') {
       flex-direction: column;
       gap: 0.6rem;
       height: fit-content;
@@ -81,20 +81,20 @@
   &__menu-item {
     display: block;
     padding: 1rem 2rem;
-    transition: background-color var.$transition, color var.$transition;
-    border-radius: var.$border-radius-small;
+    transition: background-color $transition, color $transition;
+    border-radius: $border-radius-small;
     font-size: 1.4rem;
     line-height: 150%;
     text-transform: uppercase;
 
-    @include mixins.breakpoint('tablet') {
+    @include breakpoint('tablet') {
       font-size: 2.4rem;
       letter-spacing: 0.4rem;
     }
 
     &.active {
-      color: var.$color-light;
-      background-color: var.$color-accent-bright;
+      color: $color-light;
+      background-color: $color-accent-bright;
       cursor: initial;
     }
   }
@@ -104,20 +104,20 @@
     display: flex;
 
     &.open {
-      @include mixins.breakpoint('tablet') {
+      @include breakpoint('tablet') {
         transform: translateX(0);
         z-index: 2;
       }
     }
 
-    @include mixins.breakpoint('tablet') {
+    @include breakpoint('tablet') {
       transform: translateX(100%);
       position: fixed;
       width: 100%;
       height: 100vh;
       top: 9.1rem;
       right: 0;
-      background-color: var.$color-light;
+      background-color: $color-light;
       flex-direction: column;
     }
   }
@@ -140,14 +140,14 @@
       height: 2px;
       left: 1.5rem;
       top: 3rem;
-      background-color: var.$color-text;
+      background-color: $color-text;
 
       &:before, &:after{
         transition: all 0.25s;
         width: 3rem;
         height: 2px;
         left: 0;
-        background: var.$color-text;
+        background: $color-text;
         position: absolute;
         content: '';
       }
@@ -189,7 +189,7 @@
       }
     }
 
-    @include mixins.breakpoint('tablet') {
+    @include breakpoint('tablet') {
       display: block;
     }
   }
@@ -197,7 +197,7 @@
   &__button {
     margin-left: 3rem;
 
-    @include mixins.breakpoint('tablet') {
+    @include breakpoint('tablet') {
       margin: 2rem auto;
       padding: 2rem;
     }

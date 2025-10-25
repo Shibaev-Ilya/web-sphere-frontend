@@ -1,5 +1,5 @@
-@use 'src/styles/helpers/mixins';
-@use 'src/styles/helpers/variables' as var;
+@use '../helpers/mixins' as mixins;
+@use '../helpers/variables' as var;
 
 h1, h2, h3, h4, h5, h6, ul, ol, p {
   margin: 0;

@@ -1,4 +1,4 @@
-@use "src/styles/helpers/mixins";
+// @use "src/styles/helpers/mixins";
 @use 'sass:color';
 
 $color-dark: #000000;
@@ -26,6 +26,6 @@ $margin-container-alignment: 0 auto;
 $border-radius-small: 1rem;
 $border-radius-big: 2rem;
 
-@include mixins.breakpoint('tablet') {
-  $border-radius-big: 1rem;
-}
+// @include mixins.breakpoint('tablet') {
+//   $border-radius-big: 1rem;
+// }

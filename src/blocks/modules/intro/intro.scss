@@ -1,6 +1,6 @@
-@use 'src/styles/helpers/mixins';
-@use 'src/styles/helpers/variables' as var;
-
+// @use 'src/styles/helpers/mixins';
+// @use 'src/styles/helpers/variables' as var;
+@use '../helpers/index' as *;
 .intro {
   overflow: hidden;
 
@@ -15,17 +15,17 @@
   &__title {
     font-size: 4rem;
     text-transform: uppercase;
-    font-family: var.$second-family;
+    font-family: $second-family;
   }
 
   &__subtitle {
     font-size: 2rem;
-    font-family: var.$second-family;
+    font-family: $second-family;
   }
 
   &__text-block {
     z-index: 1;
-    @include mixins.breakpoint('mobile') {
+    @include breakpoint('mobile') {
       position: absolute;
       left: 2rem;
       bottom: 0;
@@ -37,14 +37,14 @@
   }
 
   .focus-in-expand, .text-focus-in {
-    @include mixins.breakpoint('mobile') {
+    @include breakpoint('mobile') {
       animation: none;
     }
   }
 }
 
 .sphere-container {
-  @include mixins.breakpoint('mobile') {
+  @include breakpoint('mobile') {
     width: 100%;
     transform: translateX(45%);
   }
@@ -60,7 +60,7 @@
   align-items: center;
   justify-content: center;
 
-  @include mixins.breakpoint('mobile') {
+  @include breakpoint('mobile') {
     height: 55rem;
     width: 100%;
   }
@@ -101,7 +101,7 @@
     width: 0.7rem;
     height: 0.7rem;
     border-radius: 50%;
-    background: var.$color-text;
+    background: $color-text;
     left: -0.3rem;
     top: 100%;
     transform: rotateX(90deg);

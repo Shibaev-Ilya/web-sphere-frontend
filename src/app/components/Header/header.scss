@@ -1,0 +1,205 @@
+@use '../../../styles/helpers/mixins' as mixins;
+@use '../../../styles/helpers/variables' as var;
+
+.header {
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0.06rem;
+  margin: var.$margin-container-alignment;
+  max-width: var.$max-site-width;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  background-image: linear-gradient(180deg,var.$color-content-background 95%, rgba(0, 0, 0, 0) 100%);
+
+  &.light {
+    background: linear-gradient(180deg,rgba(var.$color-content-background, 0.8) 95%, rgba(0, 0, 0, 0) 100%);
+    backdrop-filter: blur(10px);
+  }
+
+  @include mixins.breakpoint('tablet') {
+    height: 9.1rem;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    overflow: hidden;
+
+    @include mixins.breakpoint('mobile') {
+      padding: 1.2rem 0;
+    }
+  }
+
+  &__logo {
+    padding: 0.8rem 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+  }
+
+  &__logo-img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
+  }
+
+  &__logo-text {
+    font-size: 1.6rem;
+    letter-spacing: 0.3rem;
+    color: var.$color-text;
+    font-family: var.$second-family;
+  }
+
+  &__menu-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+
+    @include mixins.breakpoint('tablet') {
+      flex-direction: column;
+      gap: 0.6rem;
+      height: fit-content;
+      margin-top: 5rem;
+    }
+
+    li {
+      display: block;
+    }
+  }
+
+  &__menu-item {
+    display: block;
+    padding: 1rem 2rem;
+    transition: background-color var.$transition, color var.$transition;
+    border-radius: var.$border-radius-small;
+    font-size: 1.4rem;
+    line-height: 150%;
+    text-transform: uppercase;
+
+    @include mixins.breakpoint('tablet') {
+      font-size: 2.4rem;
+      letter-spacing: 0.4rem;
+    }
+
+    &.active {
+      color: var.$color-light;
+      background-color: var.$color-accent-bright;
+      cursor: initial;
+    }
+  }
+
+  &__menu {
+    transition: transform 1s;
+    display: flex;
+
+    &.open {
+      @include mixins.breakpoint('tablet') {
+        transform: translateX(0);
+        z-index: 2;
+      }
+    }
+
+    @include mixins.breakpoint('tablet') {
+      transform: translateX(100%);
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      top: 9.1rem;
+      right: 0;
+      background-color: var.$color-light;
+      flex-direction: column;
+    }
+  }
+
+  &__burger {
+    display: none;
+    transition: all 0.25s;
+    z-index: 111;
+    cursor: pointer;
+    width: 6.5rem;
+    height: 6.5rem;
+    left: 0;
+    top: 0;
+    position: relative;
+
+    .icon{
+      transition: all 0.25s;
+      position: absolute;
+      width: 3rem;
+      height: 2px;
+      left: 1.5rem;
+      top: 3rem;
+      background-color: var.$color-text;
+
+      &:before, &:after{
+        transition: all 0.25s;
+        width: 3rem;
+        height: 2px;
+        left: 0;
+        background: var.$color-text;
+        position: absolute;
+        content: '';
+      }
+      &:before{
+        top: -1rem;
+      }
+      &:after{
+        top: 1rem;
+      }
+
+    }
+    &:hover{
+
+      .icon{
+        &:before{
+          top:-1.2rem;
+        }
+        &:after{
+          top: 1.2rem;
+        }
+      }
+    }
+    &.open{
+      .icon{
+        transform: rotate(180deg);
+        left: 1rem;
+        background-color: transparent;
+
+        &:before, &:after{
+          top: 0;
+        }
+        &:before{
+          transform: rotate(45deg);
+
+        }
+        &:after{
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    @include mixins.breakpoint('tablet') {
+      display: block;
+    }
+  }
+
+  &__button {
+    margin-left: 3rem;
+
+    @include mixins.breakpoint('tablet') {
+      margin: 2rem auto;
+      padding: 2rem;
+    }
+  }
+}

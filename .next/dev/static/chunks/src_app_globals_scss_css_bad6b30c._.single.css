@@ -1,0 +1,291 @@
+/* [project]/src/app/globals.scss.css [app-client] (css) */
+h1, h2, h3, h4, h5, h6, ul, ol, p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: #00c2b1;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+  scrollbar-color: #141414 #fff;
+  font-size: clamp(4px, .52083vw, 10px);
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: clamp(4px, .97656vw, 10px);
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: clamp(4px, 2vw, 10px);
+  }
+}
+
+body {
+  color: #141414;
+  background-color: #f4f4f4;
+  background-image: linear-gradient(#adadad1a 2px, #0000 2px), linear-gradient(90deg, #adadad1a 2px, #0000 2px);
+  background-size: 4rem 4rem;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 5rem;
+  font-family: Arial, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  display: flex;
+  overflow-x: hidden;
+}
+
+@media (max-width: 1440px) {
+  body {
+    background-size: 2vw 2vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    background-size: 4.5vw 4.5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-size: 6vw 6vw;
+  }
+}
+
+@media (max-width: 475px) {
+  body {
+    background-size: 7.5vw 7.5vw;
+  }
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  max-width: 1920px;
+  margin: 9rem auto 0;
+  overflow: hidden;
+}
+
+.visually-hidden {
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  border: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 148rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header-1 {
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-family: Trebuchet MS, Helvetica, sans-serif;
+  font-size: 5.4rem;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+@media (max-width: 1024px) {
+  .header-1 {
+    font-size: 4.6rem;
+  }
+}
+
+.header-2 {
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin-bottom: 3rem;
+  font-family: Trebuchet MS, Helvetica, sans-serif;
+  font-size: 4.2rem;
+  font-weight: 600;
+  line-height: 150%;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .header-2 {
+    font-size: 3.8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .header-2 {
+    font-size: 3.4rem;
+  }
+}
+
+.header-3 {
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  font-family: Trebuchet MS, Helvetica, sans-serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+@media (max-width: 500px) {
+  .header-3 {
+    font-size: 2.4rem;
+  }
+}
+
+.simple-link {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.simple-link:before, .simple-link:after {
+  content: "";
+  box-sizing: border-box;
+  transform-origin: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.simple-link:before {
+  border-top: 1px solid #141414;
+  border-bottom: 1px solid #141414;
+  transform: scale3d(0, 1, 1);
+}
+
+.simple-link:after {
+  border-left: 1px solid #141414;
+  border-right: 1px solid #141414;
+  transform: scale3d(1, 0, 1);
+}
+
+.simple-link:hover:before, .simple-link:hover:after {
+  transition: transform .9s;
+  transform: scale3d(1, 1, 1);
+}
+
+.button {
+  text-align: center;
+  color: #141414;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #fff;
+  border: 1px solid #141414;
+  border-radius: 1rem;
+  padding: 2rem 3rem;
+  font-size: 2rem;
+  text-decoration: none;
+  transition: all .4s;
+  display: block;
+  box-shadow: 0 4px #141414;
+}
+
+.button:hover {
+  color: #141414;
+  border-color: #141414;
+  transform: translate(0, -2px);
+  box-shadow: 0 6px #141414;
+}
+
+.button:active {
+  color: #141414;
+  box-shadow: none;
+  border-color: #141414;
+  transform: translate(0, 4px);
+}
+
+.button:visited {
+  color: #141414;
+  border-color: #141414;
+}
+
+.simple-button {
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #141414;
+  border-radius: 1rem;
+  width: fit-content;
+  height: fit-content;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 1024px) {
+  .simple-button {
+    font-size: 2.4rem;
+  }
+}
+
+.simple-button:hover {
+  background-color: #008f82;
+}
+
+.simple-button_light {
+  color: #fff;
+  background-color: #008f82;
+}
+
+.simple-button_light:hover {
+  background-color: #00c2b1;
+}
+
+.brand-color {
+  color: #008f82;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+}
+
+a {
+  color: #141414;
+  text-decoration: none;
+}
+
+input, button, textarea, fieldset {
+  background: none;
+  border: 0;
+  padding: 0;
+  font-family: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/*# sourceMappingURL=src_app_globals_scss_css_bad6b30c._.single.css.map*/
