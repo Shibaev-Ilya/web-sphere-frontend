@@ -1,3 +1,8 @@
+import Intro from "./components/Intro/Intro";
 export default function Page() {
-  return <h1>Hello, Next.js again!</h1>
+  return (
+  <main>
+    <Intro />
+  </main>
+  );
 }

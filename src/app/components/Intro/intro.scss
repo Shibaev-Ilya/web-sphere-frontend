@@ -1,7 +1,7 @@
-@use 'src/styles/helpers/mixins';
-@use 'src/styles/helpers/variables' as var;
-// @use '../helpers/index' as *;
-.intro {
+@use '../../../styles/helpers/mixins' as mixins;
+@use '../../../styles/helpers/variables' as *;
+
+.intro {  
   overflow: hidden;
 
   &__inner {
@@ -25,7 +25,7 @@
 
   &__text-block {
     z-index: 1;
-    @include breakpoint('mobile') {
+    @include mixins.breakpoint('mobile') {
       position: absolute;
       left: 2rem;
       bottom: 0;
@@ -37,14 +37,14 @@
   }
 
   .focus-in-expand, .text-focus-in {
-    @include breakpoint('mobile') {
+    @include mixins.breakpoint('mobile') {
       animation: none;
     }
   }
 }
 
 .sphere-container {
-  @include breakpoint('mobile') {
+  @include mixins.breakpoint('mobile') {
     width: 100%;
     transform: translateX(45%);
   }
@@ -60,7 +60,7 @@
   align-items: center;
   justify-content: center;
 
-  @include breakpoint('mobile') {
+  @include mixins.breakpoint('mobile') {
     height: 55rem;
     width: 100%;
   }
