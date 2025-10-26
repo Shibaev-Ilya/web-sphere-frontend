@@ -1,5 +1,5 @@
-@use "../../styles/helpers/mixins" as mixins;
-@use "../../styles/helpers/variables" as var;
+@use '../../../styles/helpers/mixins' as mixins;
+@use '../../../styles/helpers/variables' as var;
 
 .intro-text {
   background-image: var.$bg-gradient;
