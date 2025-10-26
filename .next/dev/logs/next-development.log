@@ -1,581 +1,282 @@
-[00:00:00.496] Server  LOG      ✓ Ready in 354ms
-[00:00:05.125] Server  ERROR   Invalid DOM property `stroke-width`. Did you mean `strokeWidth`?
-[00:00:05.348] Browser ERROR   Invalid DOM property `%s`. Did you mean `%s`? stroke-width strokeWidth
-[00:01:03.509] Browser ERROR   ./src/app/components/IntroText/IntroText.tsx:2:1
+[00:00:00.533] Server  LOG      ✓ Ready in 380ms
+[00:01:41.974] Browser ERROR   ./src/app/components/Advantages/Advantages.tsx:3:1
 Parsing ecmascript source code failed
-  1 | import 
-> 2 | export default function IntroText() {
+  1 | import "./advantages.scss";
+  2 | import Ima
+> 3 | const svgAwardPath = [
+    | ^^^^^
+  4 |     "/sprites/award.svg",
+  5 | ];
+  6 | const advantagesData = [
+
+Expected ',', got 'const'
+
+Import trace:
+  Server Component:
+    ./src/app/components/Advantages/Advantages.tsx
+    ./src/app/page.tsx
+[00:01:52.510] Server  LOG      ✓ Compiled in 53ms
+[00:01:52.778] Browser ERROR   uncaughtError: Error: Image with src "/sprites/award.svg" is missing required "width" property.
+[00:02:36.696] Browser ERROR   ./src/app/components/Advantages/Advantages.tsx:43:78
+Parsing ecmascript source code failed
+  41 |                         <li key={index}>
+  42 |                             <p className="advantages__item-title">
+> 43 |                                 <Image src={item.icon} alt="award" width={} />
+     |                                                                              ^
+  44 |                                 <b>{item.title}</b>
+  45 |                             </p>
+  46 |                             <p>{item.description}</p>
+
+Expression expected
+
+Import trace:
+  Server Component:
+    ./src/app/components/Advantages/Advantages.tsx
+    ./src/app/page.tsx
+[00:02:36.696] Browser ERROR   ./src/app/components/Advantages/Advantages.tsx:45:30
+Parsing ecmascript source code failed
+  43 |                                 <Image src={item.icon} alt="award" width={} />
+  44 |                                 <b>{item.title}</b>
+> 45 |                             </p>
+     |                              ^^^
+  46 |                             <p>{item.description}</p>
+  47 |                         </li>
+  48 |                     ))}
+
+Unterminated regexp literal
+
+Import trace:
+  Server Component:
+    ./src/app/components/Advantages/Advantages.tsx
+    ./src/app/page.tsx
+[00:02:38.904] Browser ERROR   ./src/app/components/Advantages/Advantages.tsx:43:76
+Parsing ecmascript source code failed
+  41 |                         <li key={index}>
+  42 |                             <p className="advantages__item-title">
+> 43 |                                 <Image src={item.icon} alt="award" width={3rem} />
+     |                                                                            ^^^
+  44 |                                 <b>{item.title}</b>
+  45 |                             </p>
+  46 |                             <p>{item.description}</p>
+
+Expected '</', got 'rem'
+
+Import trace:
+  Server Component:
+    ./src/app/components/Advantages/Advantages.tsx
+    ./src/app/page.tsx
+[00:02:47.276] Browser ERROR   ./src/app/components/Advantages/Advantages.tsx:43:78
+Parsing ecmascript source code failed
+  41 |                         <li key={index}>
+  42 |                             <p className="advantages__item-title">
+> 43 |                                 <Image src={item.icon} alt="award" width={} />
+     |                                                                              ^
+  44 |                                 <b>{item.title}</b>
+  45 |                             </p>
+  46 |                             <p>{item.description}</p>
+
+Expression expected
+
+Import trace:
+  Server Component:
+    ./src/app/components/Advantages/Advantages.tsx
+    ./src/app/page.tsx
+[00:02:47.276] Browser ERROR   ./src/app/components/Advantages/Advantages.tsx:45:30
+Parsing ecmascript source code failed
+  43 |                                 <Image src={item.icon} alt="award" width={} />
+  44 |                                 <b>{item.title}</b>
+> 45 |                             </p>
+     |                              ^^^
+  46 |                             <p>{item.description}</p>
+  47 |                         </li>
+  48 |                     ))}
+
+Unterminated regexp literal
+
+Import trace:
+  Server Component:
+    ./src/app/components/Advantages/Advantages.tsx
+    ./src/app/page.tsx
+[00:03:31.250] Server  LOG      ✓ Compiled in 12ms
+[00:03:31.360] Server  ERROR    ⨯ Error: Image with src "/sprites/award.svg" is missing required "height" property.
+[00:03:31.758] Browser ERROR   uncaughtError: Error: Image with src "/sprites/award.svg" is missing required "height" property.
+[00:03:37.283] Server  ERROR    ⨯ Error: Image with src "/sprites/award.svg" is missing required "height" property.
+[00:03:37.616] Browser ERROR   uncaughtError: Error: Image with src "/sprites/award.svg" is missing required "height" property.
+[00:06:47.354] Browser ERROR   ./src/app/components/Header/Header.tsx:6:1
+Parsing ecmascript source code failed
+  4 | import
+  5 |
+> 6 | export default function Header() {
     | ^^^^^^
-  3 |     return (
-  4 |         <section className="intro-text">
-  5 |             <div className="container">
+  7 |   return (
+  8 |     <header className="header light" id="header">
+  9 |         <div className="container header__container">
 
 Expected 'from', got 'export'
 
 Import trace:
   Server Component:
-    ./src/app/components/IntroText/IntroText.tsx
-    ./src/app/page.tsx
-[00:01:04.672] Server  ERROR    ⨯ ./src/app/components/IntroText/IntroText.tsx:1:1
-Module not found: Can't resolve ''
-> 1 | import ''
-    | ^^^^^^^^^
-  2 | export default function IntroText() {
-  3 |     return (
-  4 |         <section className="intro-text">
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:06:48.953] Browser ERROR   ./src/app/components/Header/Header.tsx:6:1
+Parsing ecmascript source code failed
+  4 | import
+  5 |
+> 6 | export default function Header() {
+    | ^^^^^^
+  7 |   return (
+  8 |     <header className="header light" id="header">
+  9 |         <div className="container header__container">
 
-
-
-Import trace:
-  Server Component:
-    ./src/app/components/IntroText/IntroText.tsx
-    ./src/app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:01:04.673] Server  ERROR    ⨯ ./src/app/components/IntroText/IntroText.tsx:1:1
-Module not found: Can't resolve ''
-> 1 | import ''
-    | ^^^^^^^^^
-  2 | export default function IntroText() {
-  3 |     return (
-  4 |         <section className="intro-text">
-
-
+Expected 'from', got 'export'
 
 Import trace:
   Server Component:
-    ./src/app/components/IntroText/IntroText.tsx
-    ./src/app/page.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:06:52.825] Server  LOG      ✓ Compiled in 4ms
+[00:06:56.254] Server  LOG      ✓ Compiled in 4ms
+[00:06:59.093] Browser ERROR   ./src/app/components/Header/Header.tsx:13:21
+Parsing ecmascript source code failed
+  11 |             <span className="header__logo">
+  12 |                 <
+> 13 |                     {/* <img className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} /> */}
+     |                     ^
+  14 |                     <span className="header__logo-text">Web Sphere</span>
+  15 |             </span>
+  16 |             <BurgerMenu />
 
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:01:04.674] Server  ERROR    ⨯ ./src/app/components/IntroText/IntroText.tsx:1:1
-Module not found: Can't resolve ''
-> 1 | import ''
-    | ^^^^^^^^^
-  2 | export default function IntroText() {
-  3 |     return (
-  4 |         <section className="intro-text">
-
-
-
-Import trace:
-  Server Component:
-    ./src/app/components/IntroText/IntroText.tsx
-    ./src/app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:01:04.675] Server  ERROR    ⨯ ./src/app/components/IntroText/IntroText.tsx:1:1
-Module not found: Can't resolve ''
-> 1 | import ''
-    | ^^^^^^^^^
-  2 | export default function IntroText() {
-  3 |     return (
-  4 |         <section className="intro-text">
-
-
+Expected '</', got '{'
 
 Import trace:
   Server Component:
-    ./src/app/components/IntroText/IntroText.tsx
-    ./src/app/page.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:07:00.153] Browser ERROR   ./src/app/components/Header/Header.tsx:13:121
+Parsing ecmascript source code failed
+  11 |             <span className="header__logo">
+  12 |                 <HeaderLogo
+> 13 |                     {/* <img className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} /> */}
+     |                                                                                                                         ^
+  14 |                     <span className="header__logo-text">Web Sphere</span>
+  15 |             </span>
+  16 |             <BurgerMenu />
 
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:01:04.675] Server  ERROR    ⨯ ./src/app/components/IntroText/IntroText.tsx:1:1
-Module not found: Can't resolve ''
-> 1 | import ''
-    | ^^^^^^^^^
-  2 | export default function IntroText() {
-  3 |     return (
-  4 |         <section className="intro-text">
-
-
+Expected '</', got '}'
 
 Import trace:
   Server Component:
-    ./src/app/components/IntroText/IntroText.tsx
-    ./src/app/page.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:07:00.661] Browser ERROR   ./src/app/components/Header/Header.tsx:13:121
+Parsing ecmascript source code failed
+  11 |             <span className="header__logo">
+  12 |                 <HeaderLogo
+> 13 |                     {/* <img className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} /> */}
+     |                                                                                                                         ^
+  14 |                     <span className="header__logo-text">Web Sphere</span>
+  15 |             </span>
+  16 |             <BurgerMenu />
 
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:01:04.676] Server  ERROR    ⨯ ./src/app/components/IntroText/IntroText.tsx:1:1
-Module not found: Can't resolve ''
-> 1 | import ''
-    | ^^^^^^^^^
-  2 | export default function IntroText() {
-  3 |     return (
-  4 |         <section className="intro-text">
-
-
+Expected '</', got '}'
 
 Import trace:
   Server Component:
-    ./src/app/components/IntroText/IntroText.tsx
-    ./src/app/page.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:07:04.250] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/. Falling back to browser navigation. {}
+[00:08:02.170] Browser ERROR   ./src/app/ui/logo/logo.tsx:8:1
+Parsing ecmascript source code failed
+  6 |         
+  7 |     );
+> 8 | }
+    | ^
 
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:01:04.834] Browser ERROR   ./src/app/components/IntroText/IntroText.tsx:1:1
-Module not found: Can't resolve ''
-> 1 | import ''
-    | ^^^^^^^^^
-  2 | export default function IntroText() {
-  3 |     return (
-  4 |         <section className="intro-text">
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
 
 Import trace:
   Server Component:
-    ./src/app/components/IntroText/IntroText.tsx
-    ./src/app/page.tsx
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:08:36.061] Browser ERROR   ./src/app/ui/logo/logo.tsx:7:11
+Parsing ecmascript source code failed
+  5 |             <Image className="header-logo__img" src="/logo/logo.svg" alt="logo" width={100} height={100} />
+  6 |             <span className="header-logo__text">Web Sphere</span>
+> 7 |         </div>
+    |           ^^^
+  8 |     );
+  9 | }
 
-https://nextjs.org/docs/messages/module-not-found
-[00:01:06.811] Server  ERROR    ⨯ ./src/app/components/IntroText/IntroText.tsx:1:1
-Module not found: Can't resolve './intro-text.scss'
-> 1 | import './intro-text.scss';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  2 | export default function IntroText() {
-  3 |     return (
-  4 |         <section className="intro-text">
-
-
-
-Import trace:
-  Server Component:
-    ./src/app/components/IntroText/IntroText.tsx
-    ./src/app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:01:06.812] Server  ERROR    ⨯ ./src/app/components/IntroText/IntroText.tsx:1:1
-Module not found: Can't resolve './intro-text.scss'
-> 1 | import './intro-text.scss';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  2 | export default function IntroText() {
-  3 |     return (
-  4 |         <section className="intro-text">
-
-
+Expected corresponding JSX closing tag for <span>
 
 Import trace:
   Server Component:
-    ./src/app/components/IntroText/IntroText.tsx
-    ./src/app/page.tsx
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:08:37.183] Server  LOG      ✓ Compiled in 9ms
+[00:08:44.182] Browser ERROR   ./src/app/components/Header/Header.tsx:15:20
+Parsing ecmascript source code failed
+  13 |                     {/* <img className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} /> */}
+  14 |                 <span className="header__logo-text">Web Sphere</span>
+> 15 |             </span>
+     |                    ^
+> 16 |             <BurgerMenu />
+     | ^^^^^^^^^^^^^
+  17 |             <TopNavigation />
+  18 |         </div>
+  19 |     </header>
 
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:01:06.813] Server  ERROR    ⨯ ./src/app/components/IntroText/IntroText.tsx:1:1
-Module not found: Can't resolve './intro-text.scss'
-> 1 | import './intro-text.scss';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  2 | export default function IntroText() {
-  3 |     return (
-  4 |         <section className="intro-text">
-
-
-
-Import trace:
-  Server Component:
-    ./src/app/components/IntroText/IntroText.tsx
-    ./src/app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:01:06.813] Server  ERROR    ⨯ ./src/app/components/IntroText/IntroText.tsx:1:1
-Module not found: Can't resolve './intro-text.scss'
-> 1 | import './intro-text.scss';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  2 | export default function IntroText() {
-  3 |     return (
-  4 |         <section className="intro-text">
-
-
+Expected '</', got 'jsx text (
+            )'
 
 Import trace:
   Server Component:
-    ./src/app/components/IntroText/IntroText.tsx
-    ./src/app/page.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:09:22.267] Server  LOG      ✓ Compiled in 3ms
+[00:10:45.089] Server  LOG      ✓ Compiled in 40ms
+[00:10:45.189] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/. Falling back to browser navigation. {}
+[00:10:46.676] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/. Falling back to browser navigation. {}
+[00:10:50.986] Browser ERROR   ./src/app/components/Header/Header.tsx:15:20
+Parsing ecmascript source code failed
+  13 |                     {/* <img className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} /> */}
+  14 |                 <span className="header__logo-text">Web Sphere</span>
+> 15 |             </span>
+     |                    ^
+> 16 |             <HeaderLogo />
+     | ^^^^^^^^^^^^^
+  17 |             <BurgerMenu />
+  18 |             <TopNavigation />
+  19 |         </div>
 
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:01:06.814] Server  ERROR    ⨯ ./src/app/components/IntroText/IntroText.tsx:1:1
-Module not found: Can't resolve './intro-text.scss'
-> 1 | import './intro-text.scss';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  2 | export default function IntroText() {
-  3 |     return (
-  4 |         <section className="intro-text">
-
-
-
-Import trace:
-  Server Component:
-    ./src/app/components/IntroText/IntroText.tsx
-    ./src/app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:01:06.815] Server  ERROR    ⨯ ./src/app/components/IntroText/IntroText.tsx:1:1
-Module not found: Can't resolve './intro-text.scss'
-> 1 | import './intro-text.scss';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  2 | export default function IntroText() {
-  3 |     return (
-  4 |         <section className="intro-text">
-
-
+Expected '</', got 'jsx text (
+            )'
 
 Import trace:
   Server Component:
-    ./src/app/components/IntroText/IntroText.tsx
-    ./src/app/page.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:10:53.244] Browser ERROR   ./src/app/components/Header/Header.tsx:15:20
+Parsing ecmascript source code failed
+  13 |                     <img className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />
+  14 |                 <span className="header__logo-text">Web Sphere</span>
+> 15 |             </span>
+     |                    ^
+> 16 |             <HeaderLogo />
+     | ^^^^^^^^^^^^^
+  17 |             <BurgerMenu />
+  18 |             <TopNavigation />
+  19 |         </div>
 
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:01:07.009] Browser ERROR   ./src/app/components/IntroText/IntroText.tsx:1:1
-Module not found: Can't resolve './intro-text.scss'
-> 1 | import './intro-text.scss';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  2 | export default function IntroText() {
-  3 |     return (
-  4 |         <section className="intro-text">
-
-Import trace:
-  Server Component:
-    ./src/app/components/IntroText/IntroText.tsx
-    ./src/app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-[00:01:12.520] Server  ERROR    ⨯ ./src/app/components/IntroText/IntroText.tsx:1:1
-Module not found: Can't resolve './intro-text.scss'
-> 1 | import './intro-text.scss';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  2 | export default function IntroText() {
-  3 |     return (
-  4 |         <section className="intro-text">
-
-
+Expected '</', got 'jsx text (
+            )'
 
 Import trace:
   Server Component:
-    ./src/app/components/IntroText/IntroText.tsx
-    ./src/app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:01:12.644] Browser ERROR   ./src/app/components/IntroText/IntroText.tsx:1:1
-Module not found: Can't resolve './intro-text.scss'
-> 1 | import './intro-text.scss';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  2 | export default function IntroText() {
-  3 |     return (
-  4 |         <section className="intro-text">
-
-Import trace:
-  Server Component:
-    ./src/app/components/IntroText/IntroText.tsx
-    ./src/app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-[00:01:12.890] Browser ERROR   ./src/app/components/IntroText/IntroText.tsx:1:1
-Module not found: Can't resolve './intro-text.scss'
-> 1 | import './intro-text.scss';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  2 | export default function IntroText() {
-  3 |     return (
-  4 |         <section className="intro-text">
-
-Import trace:
-  Server Component:
-    ./src/app/components/IntroText/IntroText.tsx
-    ./src/app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-[00:01:13.104] Browser ERROR   uncaughtError: Error: ./src/app/components/IntroText/IntroText.tsx:1:1
-Module not found: Can't resolve './intro-text.scss'
-> 1 | import './intro-text.scss';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  2 | export default function IntroText() {
-  3 |     return (
-  4 |         <section className="intro-text">
-
-
-
-Import trace:
-  Server Component:
-    ./src/app/components/IntroText/IntroText.tsx
-    ./src/app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:01:13.104] Browser ERROR   ./src/app/components/IntroText/IntroText.tsx:1:1
-Module not found: Can't resolve './intro-text.scss'
-> 1 | import './intro-text.scss';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  2 | export default function IntroText() {
-  3 |     return (
-  4 |         <section className="intro-text">
-
-Import trace:
-  Server Component:
-    ./src/app/components/IntroText/IntroText.tsx
-    ./src/app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-[00:01:13.104] Browser ERROR   ./src/app/components/IntroText/IntroText.tsx:1:1
-Module not found: Can't resolve './intro-text.scss'
-> 1 | import './intro-text.scss';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  2 | export default function IntroText() {
-  3 |     return (
-  4 |         <section className="intro-text">
-
-Import trace:
-  Server Component:
-    ./src/app/components/IntroText/IntroText.tsx
-    ./src/app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-[00:01:20.393] Browser ERROR   ./src/app/components/IntroText/introText.scss
-Error evaluating Node.js code
-Error: Can't find stylesheet to import.
-  ╷
-1 │ @use "src/styles/helpers/mixins" as mixins;
-  │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ╵
-  src/app/components/IntroText/introText.scss 1:1  root stylesheet
-Caused by: Error: Can't find stylesheet to import.
-  ╷
-1 │ @use "src/styles/helpers/mixins" as mixins;
-  │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ╵
-  src/app/components/IntroText/introText.scss 1:1  root stylesheet
-    [at Object.wrapException (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:2292:47)]
-    [at /Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:87606:25]
-    [at _wrapJsFunctionForAsync_closure.$protected (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:4960:15)]
-    [at _wrapJsFunctionForAsync_closure.call$2 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:37968:12)]
-    [at _awaitOnObject_closure.call$1 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:37956:32)]
-    [at Object._rootRunUnary (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:5378:18)]
-    [at StaticClosure.<anonymous> (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:124712:16)]
-    [at _CustomZone.runUnary$2$2 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:39399:39)]
-    [at _Future__propagateToListeners_handleValueCallback.call$0 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:38457:51)]
-    [at Object._Future__propagateToListeners (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:5170:93)]
-[00:01:31.046] Server  ERROR    ⨯ ./src/app/components/IntroText/introText.scss
-Error evaluating Node.js code
-Error: Can't find stylesheet to import.
-  ╷
-1 │ @use "src/styles/helpers/mixins" as mixins;
-  │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ╵
-  src/app/components/IntroText/introText.scss 1:1  root stylesheet
-Caused by: Error: Can't find stylesheet to import.
-  ╷
-1 │ @use "src/styles/helpers/mixins" as mixins;
-  │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ╵
-  src/app/components/IntroText/introText.scss 1:1  root stylesheet
-    [at Object.wrapException (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:2292:47)]
-    [at /Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:87606:25]
-    [at _wrapJsFunctionForAsync_closure.$protected (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:4960:15)]
-    [at _wrapJsFunctionForAsync_closure.call$2 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:37968:12)]
-    [at _awaitOnObject_closure.call$1 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:37956:32)]
-    [at Object._rootRunUnary (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:5378:18)]
-    [at StaticClosure.<anonymous> (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:124712:16)]
-    [at _CustomZone.runUnary$2$2 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:39399:39)]
-    [at _Future__propagateToListeners_handleValueCallback.call$0 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:38457:51)]
-    [at Object._Future__propagateToListeners (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:5170:93)]
-
-
-[00:01:31.105] Browser ERROR   uncaughtError: Error: ./src/app/components/IntroText/introText.scss
-Error evaluating Node.js code
-Error: Can't find stylesheet to import.
-  ╷
-1 │ @use "src/styles/helpers/mixins" as mixins;
-  │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ╵
-  src/app/components/IntroText/introText.scss 1:1  root stylesheet
-Caused by: Error: Can't find stylesheet to import.
-  ╷
-1 │ @use "src/styles/helpers/mixins" as mixins;
-  │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ╵
-  src/app/components/IntroText/introText.scss 1:1  root stylesheet
-    [at Object.wrapException (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:2292:47)]
-    [at /Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:87606:25]
-    [at _wrapJsFunctionForAsync_closure.$protected (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:4960:15)]
-    [at _wrapJsFunctionForAsync_closure.call$2 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:37968:12)]
-    [at _awaitOnObject_closure.call$1 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:37956:32)]
-    [at Object._rootRunUnary (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:5378:18)]
-    [at StaticClosure.<anonymous> (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:124712:16)]
-    [at _CustomZone.runUnary$2$2 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:39399:39)]
-    [at _Future__propagateToListeners_handleValueCallback.call$0 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:38457:51)]
-    [at Object._Future__propagateToListeners (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:5170:93)]
-
-
-[00:01:31.240] Browser ERROR   ./src/app/components/IntroText/introText.scss
-Error evaluating Node.js code
-Error: Can't find stylesheet to import.
-  ╷
-1 │ @use "src/styles/helpers/mixins" as mixins;
-  │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ╵
-  src/app/components/IntroText/introText.scss 1:1  root stylesheet
-Caused by: Error: Can't find stylesheet to import.
-  ╷
-1 │ @use "src/styles/helpers/mixins" as mixins;
-  │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ╵
-  src/app/components/IntroText/introText.scss 1:1  root stylesheet
-    [at Object.wrapException (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:2292:47)]
-    [at /Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:87606:25]
-    [at _wrapJsFunctionForAsync_closure.$protected (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:4960:15)]
-    [at _wrapJsFunctionForAsync_closure.call$2 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:37968:12)]
-    [at _awaitOnObject_closure.call$1 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:37956:32)]
-    [at Object._rootRunUnary (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:5378:18)]
-    [at StaticClosure.<anonymous> (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:124712:16)]
-    [at _CustomZone.runUnary$2$2 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:39399:39)]
-    [at _Future__propagateToListeners_handleValueCallback.call$0 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:38457:51)]
-    [at Object._Future__propagateToListeners (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:5170:93)]
-[00:01:31.240] Browser ERROR   ./src/app/components/IntroText/introText.scss
-Error evaluating Node.js code
-Error: Can't find stylesheet to import.
-  ╷
-1 │ @use "src/styles/helpers/mixins" as mixins;
-  │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ╵
-  src/app/components/IntroText/introText.scss 1:1  root stylesheet
-Caused by: Error: Can't find stylesheet to import.
-  ╷
-1 │ @use "src/styles/helpers/mixins" as mixins;
-  │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ╵
-  src/app/components/IntroText/introText.scss 1:1  root stylesheet
-    [at Object.wrapException (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:2292:47)]
-    [at /Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:87606:25]
-    [at _wrapJsFunctionForAsync_closure.$protected (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:4960:15)]
-    [at _wrapJsFunctionForAsync_closure.call$2 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:37968:12)]
-    [at _awaitOnObject_closure.call$1 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:37956:32)]
-    [at Object._rootRunUnary (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:5378:18)]
-    [at StaticClosure.<anonymous> (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:124712:16)]
-    [at _CustomZone.runUnary$2$2 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:39399:39)]
-    [at _Future__propagateToListeners_handleValueCallback.call$0 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:38457:51)]
-    [at Object._Future__propagateToListeners (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:5170:93)]
-[00:02:24.383] Server  ERROR    ⨯ ./src/app/components/IntroText/introText.scss
-Error evaluating Node.js code
-Error: Can't find stylesheet to import.
-  ╷
-1 │ @use "src/styles/helpers/mixins" as mixins;
-  │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ╵
-  src/app/components/IntroText/introText.scss 1:1  root stylesheet
-Caused by: Error: Can't find stylesheet to import.
-  ╷
-1 │ @use "src/styles/helpers/mixins" as mixins;
-  │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ╵
-  src/app/components/IntroText/introText.scss 1:1  root stylesheet
-    [at Object.wrapException (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:2292:47)]
-    [at /Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:87606:25]
-    [at _wrapJsFunctionForAsync_closure.$protected (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:4960:15)]
-    [at _wrapJsFunctionForAsync_closure.call$2 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:37968:12)]
-    [at _awaitOnObject_closure.call$1 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:37956:32)]
-    [at Object._rootRunUnary (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:5378:18)]
-    [at StaticClosure.<anonymous> (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:124712:16)]
-    [at _CustomZone.runUnary$2$2 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:39399:39)]
-    [at _Future__propagateToListeners_handleValueCallback.call$0 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:38457:51)]
-    [at Object._Future__propagateToListeners (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:5170:93)]
-
-
-[00:02:24.455] Browser ERROR   uncaughtError: Error: ./src/app/components/IntroText/introText.scss
-Error evaluating Node.js code
-Error: Can't find stylesheet to import.
-  ╷
-1 │ @use "src/styles/helpers/mixins" as mixins;
-  │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ╵
-  src/app/components/IntroText/introText.scss 1:1  root stylesheet
-Caused by: Error: Can't find stylesheet to import.
-  ╷
-1 │ @use "src/styles/helpers/mixins" as mixins;
-  │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ╵
-  src/app/components/IntroText/introText.scss 1:1  root stylesheet
-    [at Object.wrapException (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:2292:47)]
-    [at /Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:87606:25]
-    [at _wrapJsFunctionForAsync_closure.$protected (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:4960:15)]
-    [at _wrapJsFunctionForAsync_closure.call$2 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:37968:12)]
-    [at _awaitOnObject_closure.call$1 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:37956:32)]
-    [at Object._rootRunUnary (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:5378:18)]
-    [at StaticClosure.<anonymous> (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:124712:16)]
-    [at _CustomZone.runUnary$2$2 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:39399:39)]
-    [at _Future__propagateToListeners_handleValueCallback.call$0 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:38457:51)]
-    [at Object._Future__propagateToListeners (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:5170:93)]
-
-
-[00:02:24.589] Browser ERROR   ./src/app/components/IntroText/introText.scss
-Error evaluating Node.js code
-Error: Can't find stylesheet to import.
-  ╷
-1 │ @use "src/styles/helpers/mixins" as mixins;
-  │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ╵
-  src/app/components/IntroText/introText.scss 1:1  root stylesheet
-Caused by: Error: Can't find stylesheet to import.
-  ╷
-1 │ @use "src/styles/helpers/mixins" as mixins;
-  │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ╵
-  src/app/components/IntroText/introText.scss 1:1  root stylesheet
-    [at Object.wrapException (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:2292:47)]
-    [at /Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:87606:25]
-    [at _wrapJsFunctionForAsync_closure.$protected (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:4960:15)]
-    [at _wrapJsFunctionForAsync_closure.call$2 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:37968:12)]
-    [at _awaitOnObject_closure.call$1 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:37956:32)]
-    [at Object._rootRunUnary (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:5378:18)]
-    [at StaticClosure.<anonymous> (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:124712:16)]
-    [at _CustomZone.runUnary$2$2 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:39399:39)]
-    [at _Future__propagateToListeners_handleValueCallback.call$0 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:38457:51)]
-    [at Object._Future__propagateToListeners (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:5170:93)]
-[00:02:24.589] Browser ERROR   ./src/app/components/IntroText/introText.scss
-Error evaluating Node.js code
-Error: Can't find stylesheet to import.
-  ╷
-1 │ @use "src/styles/helpers/mixins" as mixins;
-  │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ╵
-  src/app/components/IntroText/introText.scss 1:1  root stylesheet
-Caused by: Error: Can't find stylesheet to import.
-  ╷
-1 │ @use "src/styles/helpers/mixins" as mixins;
-  │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ╵
-  src/app/components/IntroText/introText.scss 1:1  root stylesheet
-    [at Object.wrapException (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:2292:47)]
-    [at /Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:87606:25]
-    [at _wrapJsFunctionForAsync_closure.$protected (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:4960:15)]
-    [at _wrapJsFunctionForAsync_closure.call$2 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:37968:12)]
-    [at _awaitOnObject_closure.call$1 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:37956:32)]
-    [at Object._rootRunUnary (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:5378:18)]
-    [at StaticClosure.<anonymous> (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:124712:16)]
-    [at _CustomZone.runUnary$2$2 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:39399:39)]
-    [at _Future__propagateToListeners_handleValueCallback.call$0 (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:38457:51)]
-    [at Object._Future__propagateToListeners (/Users/aleksandra/Documents/web-sphere-frontend/node_modules/sass/sass.dart.js:5170:93)]
-[00:03:24.861] Browser ERROR   Invalid DOM property `%s`. Did you mean `%s`? stroke-width strokeWidth
-[00:03:47.888] Browser ERROR   Invalid DOM property `%s`. Did you mean `%s`? stroke-width strokeWidth
-[00:03:49.316] Browser ERROR   Invalid DOM property `%s`. Did you mean `%s`? stroke-width strokeWidth
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:10:55.396] Server  LOG      ✓ Compiled in 8ms
+[00:11:14.841] Server  LOG      ✓ Compiled in 4ms
+[00:13:19.257] Server  LOG      ✓ Compiled in 4ms

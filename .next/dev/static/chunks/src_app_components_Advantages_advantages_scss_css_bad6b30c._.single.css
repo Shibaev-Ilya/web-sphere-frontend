@@ -1,0 +1,45 @@
+/* [project]/src/app/components/Advantages/advantages.scss.css [app-client] (css) */
+.advantages {
+  padding: 5rem 0;
+}
+
+.advantages__list {
+  flex-wrap: wrap;
+  gap: 2rem;
+  display: flex;
+}
+
+@media (max-width: 500px) {
+  .advantages__list {
+    flex-direction: column;
+  }
+}
+
+.advantages__list li {
+  background-color: #fff;
+  border: 1px solid #141414;
+  border-radius: 1rem;
+  flex-direction: column;
+  flex: 1;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  font-size: 1.6rem;
+  transition: all .4s ease-in-out;
+  display: flex;
+}
+
+.advantages__item-title {
+  align-items: center;
+  gap: 1rem;
+  font-family: Trebuchet MS, Helvetica, sans-serif;
+  font-size: 1.9rem;
+  font-weight: 600;
+  display: flex;
+}
+
+.advantages__item-title img {
+  width: 3rem;
+  height: 3rem;
+}
+
+/*# sourceMappingURL=src_app_components_Advantages_advantages_scss_css_bad6b30c._.single.css.map*/
