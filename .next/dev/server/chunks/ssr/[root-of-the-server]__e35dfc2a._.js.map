@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///Users/aleksandra/Documents/web-sphere-frontend/src/app/page.tsx"],"sourcesContent":["import Intro from \"./components/Intro/Intro\";\nexport default function Page() {\n  return (<main></main>);\n}"],"names":[],"mappings":";;;;;;AACe,SAAS;IACtB,qBAAQ,8OAAC;;;;;AACX","debugId":null}}]
-}
