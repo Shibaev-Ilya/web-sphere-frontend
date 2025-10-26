@@ -66,13 +66,12 @@
   }
 }
 
-.sphere-wrapper {
-  transform-style: preserve-3d;
-  width: 40rem;
-  height: 40rem;
+.sphere-canvas {
+  width: 60rem;
+  height: 60rem;
   position: relative;
-  animation: rotate3d 40s linear infinite;
 
+<<<<<<< HEAD
   &:hover {
     animation-play-state: paused;
   }
@@ -155,5 +154,9 @@
   }
   100% {
     transform: rotateX(90deg) scale(1) translateZ(0);
+=======
+  @include breakpoint('mobile') {
+    right: -19rem;
+>>>>>>> master
   }
 }

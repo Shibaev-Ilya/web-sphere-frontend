@@ -4,8 +4,8 @@
 $color-dark: #000000;
 $color-light: #ffffff;
 $color-accent-bright: #FF6D2C;
-$color-accent-dark: #00c2b1;
 $color-accent-bright-d10: color.adjust($color-accent-bright, $lightness: -20%);
+$color-accent-dark: #00c2b1;
 $color-accent-dark-d10: color.adjust($color-accent-dark, $lightness: -10%);
 $color-text: #141414;
 $color-text-light: #F9FAFB;
@@ -23,9 +23,5 @@ $transition: 0.4s ease-in-out;
 $max-site-width: 1920px;
 $margin-container-alignment: 0 auto;
 
-$border-radius-small: 1rem;
 $border-radius-big: 2rem;
-
-// @include mixins.breakpoint('tablet') {
-//   $border-radius-big: 1rem;
-// }
+$border-radius-small: 1rem;
