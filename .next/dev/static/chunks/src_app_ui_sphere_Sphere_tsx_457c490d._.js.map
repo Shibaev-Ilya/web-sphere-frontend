@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/aleksandra/Documents/web-sphere-frontend/src/app/ui/sphere/Sphere.tsx"],"sourcesContent":["'use client';\nimport { useEffect } from 'react';\nimport { createSphereStructure } from './sphere';\nexport default function Sphere() {\n    useEffect(() => {\n        createSphereStructure();\n    }, []);\n    return (\n        <div className=\"sphere-container\" id=\"sphere\"></div>\n    );\n};"],"names":[],"mappings":";;;;;AACA;;;;;;;;AADA;;;AAGe,SAAS;;IACpB,IAAA,0KAAS;4BAAC;YACN;QACJ;2BAAG,EAAE;IACL,qBACI,6LAAC;QAAI,WAAU;QAAmB,IAAG;;;;;;AAE7C;GAPwB;KAAA","debugId":null}}]
+}
