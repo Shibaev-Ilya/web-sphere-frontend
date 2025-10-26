@@ -184,17 +184,10 @@ body {
   cursor: pointer;
   text-transform: uppercase;
 
-  &:hover {
+    &:hover {
     transform: translate(0, -2px);
     color: $color-text;
     box-shadow: 0 6px 0 0 $color-text;
-    border-color: $color-text;
-  }
-
-  &:active {
-    transform: translate(0, 4px);
-    color: $color-text;
-    box-shadow: none;
     border-color: $color-text;
   }
 
@@ -206,6 +199,7 @@ body {
 
 .simple-button {
   font-size: 1.4rem;
+  line-height: 150%;
   padding: 1rem 2rem;
   background-color: $color-text;
   color: $color-light;
