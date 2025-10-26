@@ -17,19 +17,13 @@
   &__wrapper {
     background-color: white;
     padding: 50px;
-    border-radius: $border-radius-big 0 0 $border-radius-big;
     height: 100%;
     clip-path: inset(0 0 0 100%);
     transition: clip-path $transition;
     max-width: 550px;
 
-    @include breakpoint('tablet') {
-      border-radius: $border-radius-small 0 0 $border-radius-small;
-    }
-
     @include breakpoint('mobile') {
       width: 100%;
-      border-radius: 0;
     }
   }
 
@@ -53,6 +47,10 @@
   &_open {
     pointer-events: all;
     backdrop-filter: blur(7px);
+
+    .modal__wrapper {
+      clip-path: inset(0 0 0 0%)
+    }
   }
 }
 

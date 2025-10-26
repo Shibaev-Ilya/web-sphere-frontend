@@ -11,9 +11,6 @@ const planes = 30;
 const spokes = 20;
 let angleX = 0;
 let angleY = 0;
-let paused = false;
-const speedX = 0.1;
-const speedY = 0.15;
 
 function rotate3D(x, y, z, ax, ay) {
     const cosY = Math.cos(ay);
@@ -35,18 +32,13 @@ function rotate3D(x, y, z, ax, ay) {
 function draw() {
     ctx.clearRect(0, 0, w, h);
 
-    // if (!paused) {
-    //     angleX += speedX * 0.1;
-    //     angleY += speedY * 0.2;
-    // }
-
     const time = Date.now() * 0.002;
     angleX = time * 0.1;
     angleY = time * 0.2;
 
     ctx.fillStyle = "rgba(20,20,20, 0.8)";
 
-    // рисуем точки на поверхности сферы
+    // drow dots
     for (let p = 0; p < planes; p++) {
         const phi = (p / planes) * Math.PI * 2;
 
@@ -76,8 +68,7 @@ function draw() {
             ctx.fill();
         }
     }
-    canvas.addEventListener("mouseenter", () => paused = true);
-    canvas.addEventListener("mouseleave", () => paused = false);
+
     requestAnimationFrame(draw);
 }
 

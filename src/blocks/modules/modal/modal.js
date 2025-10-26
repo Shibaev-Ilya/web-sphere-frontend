@@ -1,54 +1,38 @@
 function initModals() {
-    const bodyElement = document.body;
-    const modalButtons = document.querySelectorAll(".js-open-modal");
+    const body = document.body;
+    const modals = document.querySelectorAll(".js-modal");
     let currentModal = null;
 
-    modalButtons.forEach(button => {
-        if (!button.classList.contains("modal-init")) {
-            button.classList.add("modal-init");
-            button.addEventListener("click", function (e) {
-                const thisButton = e.currentTarget;
-                const modalId = thisButton.getAttribute("data-modal-id");
-                currentModal = document.querySelector(`#${modalId}`);
+    document.querySelectorAll(".js-open-modal:not(.modal-init)").forEach(btn => {
+        btn.classList.add("modal-init");
+        btn.addEventListener("click", e => {
+            const modal = document.querySelector(`#${e.currentTarget.dataset.modalId}`);
+            if (!modal) return;
 
-                currentModal.classList.add("modal_open");
-                bodyElement.classList.add("modal-open");
+            currentModal = modal;
+            modal.classList.add("modal_open");
+            body.classList.add("modal-open");
 
-                currentModal.querySelector(".js-button-close").addEventListener("click", onCloseButtonClick);
-                currentModal.querySelector(".modal__wrapper").style.clipPath = "inset(0 0 0 0%)";
-            });
-        }
+            modal.querySelector(".js-button-close")?.addEventListener("click", closeModal);
+        });
     });
 
-    function closeModal() {
+    function closeModal(e) {
+        e?.stopPropagation();
+
         if (currentModal) {
-            bodyElement.classList.remove("modal-open");
-            currentModal.querySelector(".modal__wrapper").removeAttribute("style");
+            body.classList.remove("modal-open");
             currentModal.classList.remove("modal_open");
-            const closeButton = currentModal.querySelector(".js-button-close");
-            if (closeButton) {
-                closeButton.removeEventListener("click", onCloseButtonClick);
-            }
+            currentModal.querySelector(".js-button-close")?.removeEventListener("click", closeModal);
             currentModal = null;
-
         }
     }
 
-    function onCloseButtonClick() {
-        closeModal();
-    }
-
-    document.addEventListener("keydown", function(e) {
-        if (e.key === "Escape") {
-            closeModal();
-        }
+    modals.forEach(modal => {
+        modal.addEventListener("click", e => e.target === modal && closeModal());
     });
 
-    // modalBackground.addEventListener("click", function(e) {
-    //     if (e.target === modalBackground) {
-    //         closeModal();
-    //     }
-    // });
+    document.addEventListener("keydown", e => e.key === "Escape" && closeModal());
 }
 
 initModals();
