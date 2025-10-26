@@ -672,3 +672,35 @@ Import trace:
 [00:13:05.613] Browser LOG     pathName in logo: /
 [00:13:05.613] Browser LOG     pathName in logo: /
 [00:13:30.304] Server  LOG      ✓ Compiled in 10ms
+[00:34:40.588] Browser ERROR   ./src/app/layout.tsx:5:1
+Parsing ecmascript source code failed
+  3 | import Header from './components/Header/Header';
+  4 | import f
+> 5 | export default function RootLayout({
+    | ^^^^^^
+  6 |   children,
+  7 | }: {
+  8 |   children: React.ReactNode
+
+Expected ',', got 'export'
+[00:34:41.737] Server  LOG      ✓ Compiled in 7ms
+[00:34:49.725] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/. Falling back to browser navigation. {}
+[00:34:49.725] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/. Falling back to browser navigation. {}
+[00:36:08.322] Browser ERROR   ./src/app/components/Footer/Footer.tsx:25:21
+Parsing ecmascript source code failed
+  23 |                         <a className="footer__menu-item" href="/">Home</a>
+  24 |                     </li>
+> 25 |                     }
+     |                     ^
+  26 |                     <li>
+  27 |                         <a className="footer__menu-item" href="#best">Best</a>
+  28 |                         {/* @@ if (mainPage === true) {
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import trace:
+  Server Component:
+    ./src/app/components/Footer/Footer.tsx
+    ./src/app/layout.tsx
+[00:37:39.036] Server  LOG      ✓ Compiled in 7ms
+[00:37:54.022] Server  LOG      ✓ Compiled in 4ms
