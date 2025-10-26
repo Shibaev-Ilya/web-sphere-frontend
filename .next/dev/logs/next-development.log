@@ -1,3 +1,674 @@
-[00:00:00.525] Server  LOG      ✓ Ready in 372ms
-[00:02:49.061] Server  ERROR    ⨯ ReferenceError: advantagesData is not defined
-[00:02:49.315] Browser ERROR   uncaughtError: ReferenceError: advantagesData is not defined
+[00:00:00.703] Server  LOG      ✓ Ready in 529ms
+[00:03:52.394] Server  LOG      ✓ Compiled in 4ms
+[00:03:53.654] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/. Falling back to browser navigation. {}
+[00:03:53.654] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/. Falling back to browser navigation. {}
+[00:03:53.655] Server  LOG      ✓ Compiled in 45ms
+[00:04:15.918] Server  LOG      ✓ Compiled in 13ms
+[00:04:16.096] Browser ERROR   ./src/app/ui/logo/logo.tsx:4:11
+Parsing ecmascript source code failed
+  2 | import Image from "next/image";
+  3 | export default function HeaderLogo() {
+> 4 |     const pa
+    |           ^^
+  5 |     return (
+  6 |         <span className="header__logo">
+  7 |             <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />
+
+'const' declarations must be initialized
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:04:17.416] Browser ERROR   ./src/app/ui/logo/logo.tsx:4:11
+Parsing ecmascript source code failed
+  2 | import Image from "next/image";
+  3 | export default function HeaderLogo() {
+> 4 |     const path
+    |           ^^^^
+  5 |     return (
+  6 |         <span className="header__logo">
+  7 |             <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />
+
+'const' declarations must be initialized
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:04:19.157] Browser ERROR   ./src/app/ui/logo/logo.tsx:4:11
+Parsing ecmascript source code failed
+  2 | import Image from "next/image";
+  3 | export default function HeaderLogo() {
+> 4 |     const pathN
+    |           ^^^^^
+  5 |     return (
+  6 |         <span className="header__logo">
+  7 |             <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />
+
+'const' declarations must be initialized
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:04:24.281] Browser ERROR   uncaughtError: ReferenceError: Can't find variable: usePa
+[00:04:25.331] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:04:25.360] Server  LOG      ✓ Compiled in 30ms
+[00:04:26.753] Server  LOG      ✓ Compiled in 13ms
+[00:04:32.905] Server  LOG      ✓ Compiled in 6ms
+[00:04:33.077] Browser LOG     
+[00:04:33.077] Browser LOG     
+[00:04:33.874] Server  LOG      ✓ Compiled in 4ms
+[00:04:34.040] Browser LOG     pathName in logo: /
+[00:04:34.041] Browser LOG     pathName in logo: /
+[00:05:01.748] Server  LOG      ✓ Compiled in 7ms
+[00:05:01.902] Browser ERROR   ./src/app/ui/logo/logo.tsx:10:15
+Parsing ecmascript source code failed
+   8 |         <>
+   9 |         </>
+> 10 |         <span className="header__logo">
+     |               ^^^^^^^^^
+  11 |             <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />
+  12 |             <span className="header__logo-text">Web Sphere</span>
+  13 |         </span>
+
+Expected ',', got 'className'
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:05:04.899] Browser ERROR   ./src/app/ui/logo/logo.tsx:11:15
+Parsing ecmascript source code failed
+   9 |         {}
+  10 |         </>
+> 11 |         <span className="header__logo">
+     |               ^^^^^^^^^
+  12 |             <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />
+  13 |             <span className="header__logo-text">Web Sphere</span>
+  14 |         </span>
+
+Expected ',', got 'className'
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:05:06.983] Browser ERROR   ./src/app/ui/logo/logo.tsx:9:30
+Parsing ecmascript source code failed
+   7 |     return (
+   8 |         <>
+>  9 |         {pathName === '/' ? (}
+     |                              ^
+  10 |         </>
+  11 |         <span className="header__logo">
+  12 |             <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />
+
+Expected '</', got '}'
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:05:12.116] Browser ERROR   ./src/app/ui/logo/logo.tsx:14:10
+Parsing ecmascript source code failed
+  12 |                 <span className="header__logo-text header__logo-text--home">Web Sphere</span>
+  13 |             </span>
+> 14 |         </>
+     |          ^^
+  15 |         <span className="header__logo">
+  16 |             <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />
+  17 |             <span className="header__logo-text">Web Sphere</span>
+
+Unterminated regexp literal
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:05:22.057] Browser ERROR   ./src/app/ui/logo/logo.tsx:16:11
+Parsing ecmascript source code failed
+  14 |         ) : (
+  15 |             <span className="header__logo">
+> 16 |         </>
+     |           ^
+  17 |         <span className="header__logo">
+  18 |             <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />
+  19 |             <span className="header__logo-text">Web Sphere</span>
+
+Expression expected
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:05:25.196] Browser ERROR   ./src/app/ui/logo/logo.tsx:21:15
+Parsing ecmascript source code failed
+  19 |         )}
+  20 |         </>
+> 21 |         <span className="header__logo">
+     |               ^^^^^^^^^
+  22 |             <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />
+  23 |             <span className="header__logo-text">Web Sphere</span>
+  24 |         </span>
+
+Expected ',', got 'className'
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:05:32.237] Browser LOG     pathName in logo: /
+[00:05:32.237] Browser LOG     pathName in logo: /
+[00:05:32.237] Browser LOG     pathName in logo: /
+[00:05:32.237] Browser LOG     pathName in logo: /
+[00:05:59.753] Server  LOG      ✓ Compiled in 9ms
+[00:06:00.048] Browser ERROR   ./src/app/ui/logo/logo.tsx:13:20
+Parsing ecmascript source code failed
+  11 |                 <img class="header__logo-img" src="img/logo/logo.svg" alt="logo" width="200" height="200">
+  12 |                 <span class="header__logo-text">Web Sphere</span>
+> 13 |             </span>
+     |                    ^
+> 14 |             <span className="header__logo header__logo--home">
+     | ^^^^^^^^^^^^^
+  15 |                 <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />
+  16 |                 <span className="header__logo-text header__logo-text--home">Web Sphere</span>
+  17 |             </span>
+
+Expected '</', got 'jsx text (
+            )'
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:06:33.233] Browser ERROR   ./src/app/ui/logo/logo.tsx:14:20
+Parsing ecmascript source code failed
+  12 |                 <img class="header__logo-img" src="img/logo/logo.svg" alt="logo" width="200" height="200">
+  13 |                 <span class="header__logo-text">Web Sphere</span>
+> 14 |             </span>
+     |                    ^
+> 15 |             <span className="header__logo header__logo--home">
+     | ^^^^^^^^^^^^^
+  16 |                 <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />
+  17 |                 <span className="header__logo-text header__logo-text--home">Web Sphere</span>
+  18 |             </span>
+
+Expected '</', got 'jsx text (
+            )'
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:06:37.601] Browser ERROR   ./src/app/ui/logo/logo.tsx:12:17
+Parsing ecmascript source code failed
+  10 |             <span class="header__logo">
+  11 |                 <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200}
+> 12 |                 <img class="header__logo-img" src="img/logo/logo.svg" alt="logo" width="200" height="200">
+     |                 ^
+  13 |                 <span class="header__logo-text">Web Sphere</span>
+  14 |             </span>
+  15 |             <span className="header__logo header__logo--home">
+
+Expression expected
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:06:59.449] Browser ERROR   ./src/app/ui/logo/logo.tsx:12:17
+Parsing ecmascript source code failed
+  10 |             <span class="header__logo">
+  11 |                 <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200}
+> 12 |                 <img class="header__logo-img" src="img/logo/logo.svg" alt="logo" width="200" height="200">
+     |                 ^
+  13 |                 <span class="header__logo-text">Web Sphere</span>
+  14 |             </span>
+  15 |         ) : (
+
+Expression expected
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:07:02.657] Browser ERROR   ./src/app/ui/logo/logo.tsx:13:17
+Parsing ecmascript source code failed
+  11 |                 <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200}
+  12 |                 // <img class="header__logo-img" src="img/logo/logo.svg" alt="logo" width="200" height="200">
+> 13 |                 <span class="header__logo-text">Web Sphere</span>
+     |                 ^
+  14 |             </span>
+  15 |         ) : (
+  16 |             <span className="header__logo">
+
+Expression expected
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:07:07.016] Browser ERROR   ./src/app/ui/logo/logo.tsx:13:17
+Parsing ecmascript source code failed
+  11 |                 <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200}
+  12 |                 // <img class="header__logo-img" src="img/logo/logo.svg" alt="logo" width="200" height="200">
+> 13 |                 <span className="header__logo-text">Web Sphere</span>
+     |                 ^
+  14 |             </span>
+  15 |         ) : (
+  16 |             <span className="header__logo">
+
+Expression expected
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:07:09.416] Browser ERROR   ./src/app/ui/logo/logo.tsx:13:17
+Parsing ecmascript source code failed
+  11 |                 <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200}
+  12 |                 // <img class="header__logo-img" src="img/logo/logo.svg" alt="logo" width="200" height="200">
+> 13 |                 <span className="header__logo-text">Web Sphere</span>
+     |                 ^
+  14 |             </span>
+  15 |         ) : (
+  16 |             <span className="header__logo">
+
+Expression expected
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:07:19.792] Browser ERROR   ./src/app/ui/logo/logo.tsx:14:20
+Parsing ecmascript source code failed
+  12 |                 // <img class="header__logo-img" src="img/logo/logo.svg" alt="logo" width="200" height="200">
+  13 |                 <span className="header__logo-text">Web Sphere</span>
+> 14 |             </span>
+     |                    ^
+> 15 |         ) : (
+     | ^^^^^^^^^^^^^
+> 16 |             <span className="header__logo">
+     | ^^^^^^^^^^^^^
+  17 |                 <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />
+  18 |                 <span className="header__logo-text">Web Sphere</span>
+  19 |             </span>
+
+Expected '</', got 'jsx text (
+        ) : (
+            )'
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:07:24.149] Browser ERROR   ./src/app/ui/logo/logo.tsx:14:20
+Parsing ecmascript source code failed
+  12 |                 // <img class="header__logo-img" src="img/logo/logo.svg" alt="logo" width="200" height="200">
+  13 |                 <span className="header__logo-text">Web Sphere</span>
+> 14 |             </span>
+     |                    ^
+> 15 |         ) : (
+     | ^^^^^^^^^^^^^
+> 16 |             <span className="header__logo">
+     | ^^^^^^^^^^^^^
+  17 |                 <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />
+  18 |                 <span className="header__logo-text">Web Sphere</span>
+  19 |             </span>
+
+Expected '</', got 'jsx text (
+        ) : (
+            )'
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:07:38.249] Browser ERROR   ./src/app/ui/logo/logo.tsx:13:20
+Parsing ecmascript source code failed
+  11 |                 <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200}>
+  12 |                 <span className="header__logo-text">Web Sphere</span>
+> 13 |             </span>
+     |                    ^
+> 14 |         ) : (
+     | ^^^^^^^^^^^^^
+> 15 |             <span className="header__logo">
+     | ^^^^^^^^^^^^^
+  16 |                 <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />
+  17 |                 <span className="header__logo-text">Web Sphere</span>
+  18 |             </span>
+
+Expected '</', got 'jsx text (
+        ) : (
+            )'
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:07:45.062] Browser LOG     pathName in logo: /
+[00:07:45.062] Browser LOG     pathName in logo: /
+[00:07:45.062] Browser LOG     pathName in logo: /
+[00:07:45.062] Browser LOG     pathName in logo: /
+[00:08:01.030] Server  LOG      ✓ Compiled in 15ms
+[00:08:01.233] Browser ERROR   ./src/app/ui/logo/logo.tsx:18:13
+Parsing ecmascript source code failed
+  16 |             <img class="header__logo-img" src="img/logo/logo.svg" alt="logo" width="200" height="200">
+  17 |             <span class="header__logo-text">Web Sphere</span>
+> 18 |         </a>
+     |             ^
+> 19 |             <span className="header__logo">
+     | ^^^^^^^^^^^^^
+  20 |                 <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />
+  21 |                 <span className="header__logo-text">Web Sphere</span>
+  22 |             </span>
+
+Expected '</', got 'jsx text (
+            )'
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:08:04.683] Browser ERROR   ./src/app/ui/logo/logo.tsx:18:17
+Parsing ecmascript source code failed
+  16 |             <img class="header__logo-img" src="img/logo/logo.svg" alt="logo" width="200" height="200">
+  17 |             <span class="header__logo-text">Web Sphere</span>
+> 18 |             </a>
+     |                 ^
+> 19 |             <span className="header__logo">
+     | ^^^^^^^^^^^^^
+  20 |                 <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />
+  21 |                 <span className="header__logo-text">Web Sphere</span>
+  22 |             </span>
+
+Expected '</', got 'jsx text (
+            )'
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:08:17.282] Browser ERROR   ./src/app/ui/logo/logo.tsx:18:19
+Parsing ecmascript source code failed
+  16 | <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />            <span class="header__logo-text">Web Sphere</span>
+  17 |             </a>
+> 18 |             <span className="header__logo">
+     |                   ^^^^^^^^^
+  19 |                 <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />
+  20 |                 <span className="header__logo-text">Web Sphere</span>
+  21 |             </span>
+
+Expected '</', got 'className'
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:08:21.682] Browser ERROR   ./src/app/ui/logo/logo.tsx:18:19
+Parsing ecmascript source code failed
+  16 |             <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />            <span class="header__logo-text">Web Sphere</span>
+  17 |             </a>
+> 18 |             <span className="header__logo">
+     |                   ^^^^^^^^^
+  19 |                 <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />
+  20 |                 <span className="header__logo-text">Web Sphere</span>
+  21 |             </span>
+
+Expected '</', got 'className'
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:08:54.115] Browser ERROR   ./src/app/ui/logo/logo.tsx:18:19
+Parsing ecmascript source code failed
+  16 |         <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />            <span class="header__logo-text">Web Sphere</span>
+  17 |             </a>
+> 18 |             <span className="header__logo">
+     |                   ^^^^^^^^^
+  19 |                 <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />
+  20 |                 <span className="header__logo-text">Web Sphere</span>
+  21 |             </span>
+
+Expected '</', got 'className'
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:08:56.748] Browser ERROR   ./src/app/ui/logo/logo.tsx:18:17
+Parsing ecmascript source code failed
+  16 |             <img class="header__logo-img" src="img/logo/logo.svg" alt="logo" width="200" height="200">
+  17 |             <span class="header__logo-text">Web Sphere</span>
+> 18 |             </a>
+     |                 ^
+> 19 |             <span className="header__logo">
+     | ^^^^^^^^^^^^^
+  20 |                 <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />
+  21 |                 <span className="header__logo-text">Web Sphere</span>
+  22 |             </span>
+
+Expected '</', got 'jsx text (
+            )'
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:09:14.156] Browser ERROR   ./src/app/ui/logo/logo.tsx:19:19
+Parsing ecmascript source code failed
+  17 |             <span class="header__logo-text">Web Sphere</span>
+  18 |             </a>
+> 19 |             <span className="header__logo">
+     |                   ^^^^^^^^^
+  20 |                 <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />
+  21 |                 <span className="header__logo-text">Web Sphere</span>
+  22 |             </span>
+
+Expected '</', got 'className'
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:09:20.932] Browser ERROR   ./src/app/ui/logo/logo.tsx:19:19
+Parsing ecmascript source code failed
+  17 |             <span class="header__logo-text">Web Sphere</span>
+  18 |             </a>
+> 19 |             <span className="header__logo">
+     |                   ^^^^^^^^^
+  20 |                 <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />
+  21 |                 <span className="header__logo-text">Web Sphere</span>
+  22 |             </span>
+
+Expected '</', got 'className'
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:09:24.066] Browser ERROR   ./src/app/ui/logo/logo.tsx:19:19
+Parsing ecmascript source code failed
+  17 |             <span className="header__logo-text">Web Sphere</span>
+  18 |             </a>
+> 19 |             <span className="header__logo">
+     |                   ^^^^^^^^^
+  20 |                 <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />
+  21 |                 <span className="header__logo-text">Web Sphere</span>
+  22 |             </span>
+
+Expected '</', got 'className'
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:09:27.565] Browser LOG     pathName in logo: /
+[00:09:27.566] Browser LOG     pathName in logo: /
+[00:09:27.566] Browser LOG     pathName in logo: /
+[00:09:27.566] Browser LOG     pathName in logo: /
+[00:09:33.287] Server  LOG      ✓ Compiled in 7ms
+[00:09:33.465] Browser LOG     pathName in logo: /
+[00:09:33.465] Browser LOG     pathName in logo: /
+[00:09:56.052] Server  LOG      ✓ Compiled in 14ms
+[00:09:56.228] Browser ERROR   ./src/app/ui/logo/logo.tsx:5:1
+Parsing ecmascript source code failed
+  3 | import { usePathname } from "next/navigation";
+  4 | import Li
+> 5 | export default function HeaderLogo() {
+    | ^^^^^^
+  6 |     const pathName =usePathname();
+  7 |     console.log('pathName in logo:', pathName);
+  8 |     return (
+
+Expected ',', got 'export'
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:09:57.057] Server  LOG      ✓ Compiled in 3ms
+[00:09:57.323] Browser LOG     pathName in logo: /
+[00:09:57.323] Browser LOG     pathName in logo: /
+[00:09:57.323] Browser LOG     pathName in logo: /
+[00:09:57.323] Browser LOG     pathName in logo: /
+[00:10:02.093] Server  LOG      ✓ Compiled in 3ms
+[00:10:02.265] Browser LOG     pathName in logo: /
+[00:10:02.265] Browser LOG     pathName in logo: /
+[00:10:09.468] Server  LOG      ✓ Compiled in 8ms
+[00:10:09.634] Browser ERROR   ./src/app/ui/logo/logo.tsx:21:9
+Parsing ecmascript source code failed
+  19 |                 <span className="header__logo-text">Web Sphere</span>
+  20 |             </a>
+> 21 |         )}
+     |         ^
+  22 |         </>
+  23 |         // <span className="header__logo">
+  24 |         //     <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />
+
+Expected '</', got ')'
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:10:11.972] Browser ERROR   ./src/app/ui/logo/logo.tsx:20:15
+Parsing ecmascript source code failed
+  18 |                 <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />
+  19 |                 <span className="header__logo-text">Web Sphere</span>
+> 20 |             </>
+     |               ^
+  21 |         )}
+  22 |         </>
+  23 |         // <span className="header__logo">
+
+Expression expected
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:10:13.977] Server  LOG      ✓ Compiled in 61ms
+[00:10:14.087] Browser LOG     pathName in logo: /
+[00:10:14.087] Browser LOG     pathName in logo: /
+[00:10:14.120] Server  LOG     pathName in logo: "/"
+[00:10:14.128] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/. Falling back to browser navigation. {}
+[00:10:14.128] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/. Falling back to browser navigation. {}
+[00:10:14.141] Server  LOG     pathName in logo: "/"
+[00:10:14.846] Browser LOG     pathName in logo: /
+[00:10:14.846] Browser LOG     pathName in logo: /
+[00:10:16.640] Server  LOG      ✓ Compiled in 5ms
+[00:10:16.818] Browser LOG     pathName in logo: /
+[00:10:16.818] Browser LOG     pathName in logo: /
+[00:10:21.999] Server  LOG      ✓ Compiled in 8ms
+[00:10:22.131] Browser LOG     pathName in logo: /
+[00:10:22.131] Browser LOG     pathName in logo: /
+[00:10:25.203] Server  LOG      ✓ Compiled in 5ms
+[00:10:25.357] Browser LOG     pathName in logo: /
+[00:10:25.357] Browser LOG     pathName in logo: /
+[00:10:37.920] Server  LOG      ✓ Compiled in 4ms
+[00:10:38.106] Browser LOG     pathName in logo: /
+[00:10:38.106] Browser LOG     pathName in logo: /
+[00:10:39.700] Server  LOG      ✓ Compiled in 12ms
+[00:10:39.907] Browser ERROR   ./src/app/ui/logo/logo.tsx:17:49
+Parsing ecmascript source code failed
+  15 |             </span>
+  16 |         ) : (
+> 17 |             <Link className="header__logo" to={}>
+     |                                                 ^
+  18 |                 <Image className="header__logo-img" src="/logo/logo.svg" alt="logo" width={200} height={200} />
+  19 |                 <span className="header__logo-text">Web Sphere</span>
+  20 |             </Link>
+
+Expression expected
+
+Import trace:
+  Server Component:
+    ./src/app/ui/logo/logo.tsx
+    ./src/app/components/Header/Header.tsx
+    ./src/app/layout.tsx
+[00:10:41.385] Browser LOG     pathName in logo: /
+[00:10:41.385] Browser LOG     pathName in logo: /
+[00:10:41.385] Browser LOG     pathName in logo: /
+[00:10:41.385] Browser LOG     pathName in logo: /
+[00:11:26.370] Server  LOG      ✓ Compiled in 7ms
+[00:11:26.556] Browser LOG     pathName in logo: /
+[00:11:26.556] Browser LOG     pathName in logo: /
+[00:11:32.909] Server  LOG     pathName in logo: "/"
+[00:11:32.998] Browser LOG     pathName in logo: /
+[00:11:32.998] Browser LOG     pathName in logo: /
+[00:11:41.763] Server  LOG     pathName in logo: "/any"
+[00:11:42.412] Browser LOG     pathName in logo: /any
+[00:11:42.412] Browser LOG     pathName in logo: /any
+[00:11:47.680] Browser LOG     pathName in logo: /
+[00:11:47.681] Browser LOG     pathName in logo: /
+[00:11:47.681] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:12:41.834] Browser LOG     pathName in logo: /
+[00:12:41.834] Browser LOG     pathName in logo: /
+[00:12:45.187] Server  LOG     pathName in logo: "/"
+[00:12:45.274] Browser LOG     pathName in logo: /
+[00:12:45.275] Browser LOG     pathName in logo: /
+[00:12:51.155] Server  LOG     pathName in logo: "/any"
+[00:12:51.320] Browser LOG     pathName in logo: /any
+[00:12:51.320] Browser LOG     pathName in logo: /any
+[00:13:05.613] Browser LOG     pathName in logo: /
+[00:13:05.613] Browser LOG     pathName in logo: /
+[00:13:05.613] Browser LOG     pathName in logo: /
+[00:13:05.613] Browser LOG     pathName in logo: /
+[00:13:05.613] Browser LOG     pathName in logo: /
+[00:13:05.613] Browser LOG     pathName in logo: /
+[00:13:30.304] Server  LOG      ✓ Compiled in 10ms
