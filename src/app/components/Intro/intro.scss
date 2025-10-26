@@ -1,7 +1,7 @@
 @use '../../../styles/helpers/mixins' as mixins;
 @use '../../../styles/helpers/variables' as *;
 
-.intro {  
+.intro {
   overflow: hidden;
 
   &__inner {
@@ -66,94 +66,12 @@
   }
 }
 
-.sphere-wrapper {
-  transform-style: preserve-3d;
-  width: 40rem;
-  height: 40rem;
+.sphere-canvas {
+  width: 60rem;
+  height: 60rem;
   position: relative;
-  animation: rotate3d 40s linear infinite;
 
-  &:hover {
-    animation-play-state: paused;
-  }
-}
-
-.plane {
-  position: absolute;
-  transform-style: preserve-3d;
-  inset: 0;
-  z-index: 10;
-}
-
-.spoke {
-  transform-origin: 0 0;
-  transform-style: preserve-3d;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: 20rem;
-  width: 0;
-  z-index: 10;
-
-  &:before {
-    content: '';
-    position: absolute;
-    width: 0.7rem;
-    height: 0.7rem;
-    border-radius: 50%;
-    background: $color-text;
-    left: -0.3rem;
-    top: 100%;
-    transform: rotateX(90deg);
-    z-index: 10;
-
-  }
-}
-
-@for $i from 1 through 36 {
-  .spoke.spoke-#{$i} {
-    transform: rotateZ($i * 10deg);
-  }
-}
-
-@for $i from 1 through 12 {
-  .plane.plane-#{$i} {
-    transform: rotateY($i * 15deg);
-  }
-}
-
-@for $i from 0 through 18 {
-  $delay: $i * 0.05555556s;
-
-  .spoke-#{$i}:before,
-  .spoke-#{36 - $i}:before {
-    animation: pulsate 1s infinite #{$delay} alternate both;
-  }
-}
-
-@keyframes rotate3d {
-  0% {
-    transform: rotate3d(1, 1, 1, 0deg);
-  }
-  25% {
-    transform: rotate3d(1, 1, 1, 90deg);
-  }
-  50% {
-    transform: rotate3d(1, 1, 1, 180deg);
-  }
-  75% {
-    transform: rotate3d(1, 1, 1, 270deg);
-  }
-  100% {
-    transform: rotate3d(1, 1, 1, 360deg);
-  }
-}
-
-@keyframes pulsate {
-  0% {
-    transform: rotateX(90deg) scale(0.6) translateZ(3rem);
-  }
-  100% {
-    transform: rotateX(90deg) scale(1) translateZ(0);
+  @include mixins.breakpoint('mobile') {
+    right: -19rem;
   }
 }
