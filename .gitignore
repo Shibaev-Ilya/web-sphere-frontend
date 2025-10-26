@@ -3,6 +3,7 @@
 
 .env
 node_modules
+.next
 .yarn
 .yarnrc.yml
 yarn.lock
