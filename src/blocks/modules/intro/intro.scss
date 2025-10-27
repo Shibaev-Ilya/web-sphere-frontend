@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 100rem;
+    max-width: 104rem;
     position: relative;
   }
 
@@ -51,10 +51,8 @@
 
 .main-wrapper {
   display: flex;
-  transform-style: preserve-3d;
-  perspective: 40rem;
-  height: 60rem;
-  width: 60rem;
+  height: 65rem;
+  width: 65rem;
   inset: 0;
   align-items: center;
   justify-content: center;
@@ -66,11 +64,14 @@
 }
 
 .sphere-canvas {
-  width: 60rem;
-  height: 60rem;
+  width: 65rem;
+  height: 65rem;
   position: relative;
 
   @include breakpoint('mobile') {
     right: -19rem;
+    width: 60rem;
+    height: 60rem;
+
   }
 }

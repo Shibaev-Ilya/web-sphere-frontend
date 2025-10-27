@@ -25,23 +25,19 @@
     background-color: $color-light;
     position: relative;
     border-radius: $border-radius-small;
+    overflow: hidden;
+    transition: transform $transition;
+    will-change: transform;
+    cursor: pointer;
 
-    &_wide {
-      @include breakpoint('tablet') {
-        grid-column: 1 / 3;
-        .services__item-inner {
-          flex-direction: row;
+    @media (hover: hover) {
+      &:hover {
+        transform: translateY(-1rem) scale(1.03);
+
+        .services__landings-img {
+          filter: none;
         }
       }
-
-      @include breakpoint('mobile') {
-        grid-column: 1 / -1;
-
-        .services__item-inner {
-          flex-direction: column;
-        }
-      }
-
     }
   }
 
@@ -61,13 +57,7 @@
   }
 
   &__image {
-    height: 40rem;
-
-    svg {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
+    height: 45rem;
   }
 
   &__item-inner {
@@ -88,6 +78,24 @@
 
   .header-2 {
     text-align: center;
+    margin-bottom: 5rem;
+
+    @include breakpoint('mobile') {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__landings-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @media (hover: hover) {
+      filter: grayscale(0.7);
+      transition: filter $transition;
+    }
+
   }
 
 }
