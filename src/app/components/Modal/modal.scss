@@ -1,0 +1,61 @@
+@use '../../../styles/helpers/index' as *;
+
+
+.modal {
+  z-index: 35;
+  transition: opacity $transition, backdrop-filter $transition;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  backdrop-filter: blur(0);
+  width: 100%;
+  pointer-events: none;
+  display: flex;
+  justify-content: flex-end;
+
+  &__wrapper {
+    background-color: white;
+    padding: 50px;
+    border-radius: $border-radius-big 0 0 $border-radius-big;
+    height: 100%;
+    clip-path: inset(0 0 0 100%);
+    transition: clip-path $transition;
+    max-width: 550px;
+
+    @include breakpoint('tablet') {
+      border-radius: $border-radius-small 0 0 $border-radius-small;
+    }
+
+    @include breakpoint('mobile') {
+      width: 100%;
+      border-radius: 0;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+
+  &__btn-close {
+    position: absolute;
+    right: 13px;
+    top: 13px;
+    width: 24px;
+    height: 24px;
+
+    svg {
+      stroke: #000000;
+    }
+  }
+
+  &_open {
+    pointer-events: all;
+    backdrop-filter: blur(7px);
+  }
+}
+
+body.modal-open {
+  overflow: hidden;
+}

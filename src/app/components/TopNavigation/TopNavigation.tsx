@@ -1,3 +1,4 @@
+import CallButton from "app/ui/callButton/callButton"
 export default function TopNavigation() {
     return (
         <nav className="header__menu js-menu">
@@ -13,9 +14,7 @@ export default function TopNavigation() {
                         <a className="header__menu-item simple-link js-header-link" href="#">Anchor 1</a>
                     </li>
                 </ul>
-                <button className="header__button simple-button js-open-modal" data-modal-id="callback">
-                    <span>Обратный звонок</span>
-                </button>
+                <CallButton />
             </nav>
     )
 }
