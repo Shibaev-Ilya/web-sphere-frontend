@@ -18,7 +18,7 @@
       flex-direction: column;
       gap: 2rem;
       padding: 3rem 2rem;
-      border: 1px solid $color-text;
+      border: 2px solid $color-text;
       background-color: $color-light;
       transition: $transition;
       font-size: 1.6rem;
@@ -28,7 +28,7 @@
 
   &__item-title {
     font-weight: 600;
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     font-family: $second-family;
     display: flex;
     align-items: center;

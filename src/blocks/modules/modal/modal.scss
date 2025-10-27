@@ -16,11 +16,11 @@
 
   &__wrapper {
     background-color: white;
-    padding: 50px;
+    padding: 5rem;
     height: 100%;
     clip-path: inset(0 0 0 100%);
     transition: clip-path $transition;
-    max-width: 550px;
+    max-width: 55rem;
 
     @include breakpoint('mobile') {
       width: 100%;
@@ -28,16 +28,16 @@
   }
 
   &__title {
-    font-size: 30px;
-    margin-bottom: 25px;
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
   }
 
   &__btn-close {
     position: absolute;
-    right: 13px;
-    top: 13px;
-    width: 24px;
-    height: 24px;
+    right: 1.3rem;
+    top: 1.3rem;
+    width: 2.4rem;
+    height: 2.4rem;
 
     svg {
       stroke: #000000;
@@ -52,6 +52,98 @@
       clip-path: inset(0 0 0 0%)
     }
   }
+}
+
+.modal-contact {
+  padding: 5rem 4rem;
+  overflow: auto;
+
+  &__top {
+    display: flex;
+    gap: 1rem;
+    border-radius: $border-radius-small;
+    @include custom-border($border-radius-small, $color_text);
+    padding: 1.5rem;
+    background-color: $color-content-background;
+  }
+
+  &__ava {
+    width: 5rem;
+    height: 5rem;
+    clip-path: circle(50%);
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    line-height: 150%;
+
+    a {
+      color: $color-accent-dark-d10;
+      transition: color $transition;
+      white-space: nowrap;
+
+      &:hover {
+        color: $color-accent-bright
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 4rem;
+    margin-bottom: auto;
+  }
+
+  &__link {
+    border-radius: $border-radius-small;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+    gap: 1rem;
+
+    span {
+      transition: color $transition;
+      font-size: 1.8rem;
+    }
+
+    &:hover {
+      svg {
+        path {
+          fill: $color-accent-bright;
+        }
+      }
+
+      span {
+        color: $color-accent-bright;
+      }
+    }
+
+
+    svg {
+      path {
+        fill: $color-accent-dark-d10;
+        transition: $transition;
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__form {
+    &.form {
+      margin-top: 2rem;
+      max-width: 100%;
+    }
+  }
+
+  .modal__title {
+    font-size: 4rem;
+  }
+
 }
 
 body.modal-open {

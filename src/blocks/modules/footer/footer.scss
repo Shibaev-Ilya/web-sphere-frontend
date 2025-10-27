@@ -89,6 +89,7 @@
 
     a {
       transition: $transition;
+      font-size: 1.4rem;
     }
   }
 
@@ -113,6 +114,10 @@
 
   &__row + &__row {
     margin-top: 4rem;
+  }
+
+  &__copyright {
+    font-size: 1.4rem;
   }
 
   .simple-link:before, .simple-link:after {

@@ -43,6 +43,7 @@
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
+    z-index: 11;
   }
 
   &__logo-img {
@@ -110,11 +111,13 @@
     }
 
     @include breakpoint('tablet') {
+      will-change: transform;
       transform: translateX(100%);
+      padding-top: 9.1rem;
       position: fixed;
       width: 100%;
       height: 100vh;
-      top: 9.1rem;
+      top: 0;
       right: 0;
       background-color: $color-light;
       flex-direction: column;
@@ -124,7 +127,7 @@
   &__burger {
     display: none;
     transition: all 0.25s;
-    z-index: 111;
+    z-index: 11;
     cursor: pointer;
     width: 6.5rem;
     height: 6.5rem;
