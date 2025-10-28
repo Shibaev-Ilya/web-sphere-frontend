@@ -13,6 +13,12 @@
     }
   }
 
+  &__logo-img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
+  }
+
   &__container {
     padding: 3rem;
     background-color: $color-footer-background;
@@ -39,7 +45,6 @@
     margin-bottom: 2rem;
 
     @include breakpoint('mobile') {
-      flex-direction: column;
       gap: 4rem;
     }
   }
@@ -58,7 +63,7 @@
   }
 
   &__menu-item {
-    font-size: 1.8rem;
+    font-size: 2rem;
     line-height: 120%;
     padding: 0.5rem 1rem;
 
@@ -89,21 +94,43 @@
 
     a {
       transition: $transition;
-      font-size: 1.4rem;
+      font-size: 2rem;
     }
   }
 
   &__logo {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
 
+    svg {
+      use {
+        transition: $transition;
+        fill: $color-light;
+      }
+    }
+
+    &:hover {
+      svg use {
+        fill: $color-accent-dark;
+      }
+
+      .footer__logo-text {
+        color: $color-accent-dark;
+      }
+    }
   }
 
   &__logo-text {
-    font-size: 2.6rem;
+    font-size: 1.7rem;
     line-height: 120%;
     font-family: $second-family;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 0.3rem;
+    transition: color $transition;
   }
 
   &__contacts {
@@ -112,12 +139,16 @@
     gap: 1rem;
   }
 
+  &__contacts-item {
+    font-size: 2rem;
+  }
+
   &__row + &__row {
     margin-top: 4rem;
   }
 
-  &__copyright {
-    font-size: 1.4rem;
+  &__copyright, a.footer__copyright  {
+    font-size: 1.6rem;
   }
 
   .simple-link:before, .simple-link:after {

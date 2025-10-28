@@ -4,31 +4,32 @@
   padding: 5rem 0;
 
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
 
     @include breakpoint('mobile') {
       flex-direction: column;
+      grid-template-columns: 1fr;
     }
 
     li {
-      flex: 1;
       display: flex;
       flex-direction: column;
       gap: 2rem;
       padding: 3rem 2rem;
       border: 2px solid $color-text;
-      background-color: $color-light;
+      background-image: linear-gradient(135deg,rgba(255, 255, 255, 1) 66%, rgba(0, 194, 177, 1) 66%);;
       transition: $transition;
-      font-size: 1.6rem;
+      font-size: 2rem;
       border-radius: $border-radius-small;
+      box-shadow: 4px 4px 0 0 $color-text;
     }
   }
 
   &__item-title {
     font-weight: 600;
-    font-size: 1.8rem;
+    font-size: 2.4rem;
     font-family: $second-family;
     display: flex;
     align-items: center;
