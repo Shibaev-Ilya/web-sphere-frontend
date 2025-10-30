@@ -16,11 +16,12 @@
     text-transform: uppercase;
     font-family: $second-family;
     font-weight: 600;
+    letter-spacing: 0.1em;
   }
 
   &__subtitle {
     font-size: 2.4rem;
-    //font-family: $second-family;
+    font-family: $second-family;
   }
 
   &__text-block {

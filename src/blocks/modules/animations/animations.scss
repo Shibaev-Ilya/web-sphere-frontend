@@ -1,10 +1,13 @@
-.focus-in-expand {
-  animation: focus-in-expand 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+@use 'src/styles/helpers/index' as *;
+
+.focus-in-fast {
+  animation: text-focus-in 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  will-change: opacity, filter;
 }
 
-.text-focus-in {
+.focus-in {
   animation: text-focus-in 1.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  will-change: opacity, filter, letter-spacing;
+  will-change: opacity, filter;
 }
 
 .shake-right {
@@ -12,27 +15,38 @@
   will-change: transform;
 }
 
-@keyframes focus-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    filter: blur(12px);
-    opacity: 0;
+.scroll-animate {
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+  will-change: opacity, transform;
+
+  &_top {
+    transform: translateY(50px);
+    will-change: opacity, transform;
   }
-  100% {
-    letter-spacing: 0.1em;
-    filter: blur(0px);
+
+  &_left {
+    transform: translateX(-50px);
+    will-change: opacity, transform;
+  }
+
+  &_right {
+    transform: translateX(50px);
+    will-change: opacity, transform;
+  }
+
+  &.visible {
     opacity: 1;
+    transform: translateY(0) translateX(0);
   }
 }
 
 @keyframes text-focus-in {
   0% {
-    -webkit-filter: blur(12px);
     filter: blur(12px);
     opacity: 0;
   }
   100% {
-    -webkit-filter: blur(0px);
     filter: blur(0px);
     opacity: 1;
   }
