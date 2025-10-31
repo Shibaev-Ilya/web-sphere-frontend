@@ -44,6 +44,51 @@
   gap: 1.5rem;
   width: 100%;
   max-width: 71rem;
+  position: relative;
+
+  &.submitting {
+    opacity: 0.6;
+    pointer-events: none;
+
+    * {
+      cursor: not-allowed;
+    }
+
+    input, select, textarea {
+      opacity: 0.4;
+    }
+  }
+}
+
+form .wpcf7-response-output {
+  margin: 2em 0.5em 1em;
+  padding: 0.2em 1em;
+  border: 2px solid #00a0d2;
+}
+
+.wpcf7-spinner {
+  position: absolute;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  box-sizing: border-box;
+  border: 5px solid rgba(20,20,20,0.2);
+  border-top-color: $color-text;
+  border-radius: 50%;
+  animation: spin 0.85s linear infinite;
+  background-color: transparent;
+  top: 30%;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  &::before {
+    display:none;
+  }
+}
+
+.wpcf7-response-output {
+  display: none;
 }
 
 .checkbox-label {
@@ -90,4 +135,8 @@ input[type="submit"] {
   margin: 1rem 0;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }

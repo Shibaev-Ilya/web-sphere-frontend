@@ -1,6 +1,5 @@
 @use 'src/styles/helpers/index' as *;
 
-
 .modal {
   z-index: 35;
   transition: opacity $transition, backdrop-filter $transition;
@@ -14,22 +13,55 @@
   display: flex;
   justify-content: flex-end;
 
+  &_info {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_success {
+    .modal__wrapper {
+      border-color: $color-accent-dark-d10!important;
+    }
+  }
+
+  &_error {
+    .modal__wrapper {
+      border-color: $color-accent-bright-d10!important;
+    }
+  }
+
   &__wrapper {
+    position: relative;
     background-color: white;
     padding: 5rem;
     height: 100%;
     clip-path: inset(0 0 0 100%);
     transition: clip-path $transition;
     max-width: 55rem;
+    min-width: 30rem;
 
     @include breakpoint('mobile') {
       width: 100%;
     }
   }
 
+  &_info {
+    .modal__wrapper {
+      clip-path: inset( 0 0 100% 0);
+      height: fit-content;
+      border-radius: $border-radius-small;
+      @include custom-border(16px, $color_text)
+    }
+  }
+
   &__title {
     font-size: 3rem;
     margin-bottom: 2.5rem;
+  }
+
+  &__text {
+    font-size: 2.2rem;
+    text-align: initial;
   }
 
   &__btn-close {
