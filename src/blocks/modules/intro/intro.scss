@@ -9,6 +9,10 @@
     justify-content: space-between;
     max-width: 109rem;
     position: relative;
+
+    @include breakpoint('tablet') {
+      justify-content: flex-end;
+    }
   }
 
   &__title {
@@ -26,7 +30,7 @@
 
   &__text-block {
     z-index: 1;
-    @include breakpoint('mobile') {
+    @include breakpoint('tablet') {
       position: absolute;
       left: 2rem;
       bottom: 0;
@@ -44,34 +48,17 @@
   }
 }
 
-.sphere-container {
-  @include breakpoint('mobile') {
-    width: 100%;
-    transform: translateX(45%);
-  }
-}
-
-.main-wrapper {
-  display: flex;
-  height: 65rem;
-  width: 65rem;
-  inset: 0;
-  align-items: center;
-  justify-content: center;
-
-  @include breakpoint('mobile') {
-    height: 55rem;
-    width: 100%;
-  }
-}
-
 .sphere-canvas {
   width: 65rem;
   height: 65rem;
   position: relative;
 
+  @include breakpoint('tablet') {
+    right: -5rem;
+
+  }
   @include breakpoint('mobile') {
-    right: -19rem;
+    right: -31rem;
     width: 60rem;
     height: 60rem;
 

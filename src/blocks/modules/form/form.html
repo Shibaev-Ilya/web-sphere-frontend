@@ -7,30 +7,30 @@
             <input type="hidden" name="form_id" value="callback">
             <input type="hidden" name="form_name" value="Callback">
             <label>
-                <input class="form__input" type="text" name="name" placeholder="Имя"/>
+                <input type="text" name="name" placeholder="Имя"/>
             </label>
             <label>
-                <input class="form__input" type="tel" name="phone" placeholder="Телефон*">
+                <input type="tel" name="phone" placeholder="Телефон*">
             </label>
             <label>
-                <input class="form__input" type="email" name="email" placeholder="Email">
+                <input type="email" name="email" placeholder="Email">
             </label>
             <label>
-                <textarea class="form__input" name="message" cols="30" rows="5" placeholder="Дополнительная информация о проекте"></textarea>
+                <textarea name="message" cols="30" rows="5" placeholder="Дополнительная информация о проекте"></textarea>
             </label>
-            <label class="form__checkbox-label">
-                <input class="form__checkbox" type="checkbox" name="agree" required/>
+            <label class="checkbox-label">
+                <input type="checkbox" name="agree" required/>
                 <span>
                         Согласен на <a href="/agreement" target="_blank">обработку персональных данных</a>
                     </span>
             </label>
-            <label class="form__checkbox-label">
-                <input class="form__checkbox" type="checkbox" name="agree" required/>
+            <label class="checkbox-label">
+                <input type="checkbox" name="agree" required/>
                 <span>
                         Ознакомлен с <a href="/policy" target="_blank" class="">политикой конфиденциальности</a>
                     </span>
             </label>
-            <button type="submit" class="form__submit-button simple-button simple-button_light">Отправить</button>
+            <input type="submit" class="simple-button simple-button_light" value="Отправить">
         </form>
     </div>
 </section>

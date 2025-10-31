@@ -9,6 +9,15 @@
   background-position: 120%, center;
   background-size: 50%, cover;
 
+  @include breakpoint('tablet') {
+    background-position: 142%, center;
+    background-size: 72%, cover;
+  }
+
+  @include breakpoint('mobile') {
+    background-image: none, $bg-gradient;
+  }
+
   .header-2 {
     margin-bottom: 1rem;
     color: $color-text;
@@ -23,54 +32,62 @@
   .container {
     position: relative;
     z-index: 2;
+    @include breakpoint('tablet') {
+      backdrop-filter: blur(6px);
+    }
   }
 }
 
-.form {
+.form, .wpcf7-form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   width: 100%;
   max-width: 71rem;
+}
 
-  &__input {
-    border: 1px solid #a6a6a6;
-    border-radius: $border-radius-small;
-    padding: 2rem 2rem;
-    font-size: 2.2rem;
-    background-color: $color-light;
-    width: 100%;
-  }
+.checkbox-label {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.8rem;
+  color: color.scale($color-text, $lightness: 30%, $space: oklch);
+  align-items: center;
 
-  &__checkbox-label {
-    display: flex;
-    gap: 1rem;
-    font-size: 1.8rem;
+  a {
+    text-decoration: underline;
+    transition: $transition;
     color: color.scale($color-text, $lightness: 30%, $space: oklch);
-    align-items: center;
 
-    a {
-      text-decoration: underline;
-      transition: $transition;
-      color: color.scale($color-text, $lightness: 30%, $space: oklch);
-
-      &:hover {
-        color: $color-accent-dark-d10;
-      }
+    &:hover {
+      color: $color-accent-dark-d10;
     }
   }
+}
 
-  &__checkbox {
-    accent-color: $color-text;
-    width: 2rem;
-    height: 2rem;
-  }
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  border: 1px solid #a6a6a6;
+  border-radius: $border-radius-small;
+  padding: 2rem 2rem;
+  font-size: 2.2rem;
+  background-color: $color-light;
+  width: 100%;
+}
 
-  &__submit-button {
-    padding: 1.5rem 2rem;
-    font-size: 1.8rem;
-    min-width: 30rem;
-    margin: 1rem 0;
-  }
+input[type="checkbox"] {
+  accent-color: $color-text;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
 
+input[type="submit"] {
+  padding: 1.5rem 2rem;
+  font-size: 1.8rem;
+  min-width: 30rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
 }

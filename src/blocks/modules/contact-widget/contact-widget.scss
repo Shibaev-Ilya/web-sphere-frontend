@@ -9,6 +9,7 @@
   box-shadow: 0 5px 8px 0 rgba(34, 60, 80, 0.2);
   padding-right: 2rem;
   border-radius: 3rem 0 0 3rem;
+  z-index: 2;
 
   &:hover {
     animation-play-state: paused;
