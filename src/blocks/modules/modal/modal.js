@@ -1,4 +1,4 @@
-let currentModal = null;
+let modalStack = []; // Стек для хранения открытых модальных окон
 const body = document.body;
 
 function initModals() {
@@ -12,38 +12,56 @@ function initModals() {
     });
 
     modals.forEach(modal => {
-        modal.addEventListener("click", e => e.target === modal && closeModal());
+        modal.addEventListener("click", e => e.target === modal && closeTopModal());
     });
 
-    document.addEventListener("keydown", e => e.key === "Escape" && closeModal());
+    document.addEventListener("keydown", e => e.key === "Escape" && closeTopModal());
 }
 
 export function openModal(modalId, response = "", type = "success") {
     const modal = document.querySelector(`#${modalId}`);
     if (!modal) return;
 
-    currentModal = modal;
+    modalStack.push({
+        element: modal,
+        id: modalId,
+        response: response,
+        type: type
+    });
+
     modal.classList.add("modal_open");
     body.classList.add("modal-open");
 
-    modal.querySelector(".js-button-close")?.addEventListener("click", closeModal);
+    updateModalZIndex();
+
+    modal.querySelector(".js-button-close")?.addEventListener("click", closeTopModal);
 
     if (response) {
         modal.querySelector(".js-modal-text").textContent = response;
         modal.classList.add(`modal_${type}`);
     }
-
 }
 
-export function closeModal(e) {
-    e?.stopPropagation();
+export function closeTopModal() {
+    if (modalStack.length === 0) return;
 
-    if (currentModal) {
+    const topModal = modalStack.pop();
+    const modal = topModal.element;
+
+    body.classList.remove("modal-open");
+    modal.classList.remove("modal_open");
+    modal.classList.remove(`modal_${topModal.type}`);
+    modal.querySelector(".js-button-close")?.removeEventListener("click", closeTopModal);
+
+    if (modalStack.length === 0) {
         body.classList.remove("modal-open");
-        currentModal.classList.remove("modal_open");
-        currentModal.querySelector(".js-button-close")?.removeEventListener("click", closeModal);
-        currentModal = null;
     }
+}
+
+function updateModalZIndex() {
+    modalStack.forEach((modal, index) => {
+        modal.element.style.zIndex = (1000 + index).toString();
+    });
 }
 
 document.addEventListener("wpcf7mailsent", function(event) {
@@ -51,8 +69,8 @@ document.addEventListener("wpcf7mailsent", function(event) {
     openModal("popup", response, "success");
 
     setTimeout(() => {
-        if (currentModal) {
-            closeModal();
+        if (modalStack.length > 0 && modalStack[modalStack.length - 1].id === "popup") {
+            closeTopModal();
         }
     }, 5000);
 }, false);
@@ -62,8 +80,8 @@ document.addEventListener("wpcf7mailfailed", function(event) {
     openModal("popup", response, "error");
 
     setTimeout(() => {
-        if (currentModal) {
-            closeModal();
+        if (modalStack.length > 0 && modalStack[modalStack.length - 1].id === "popup") {
+            closeTopModal();
         }
     }, 5000);
 }, false);

@@ -135,6 +135,13 @@ input[type="submit"] {
   margin: 1rem 0;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
+
+  &:disabled {
+    pointer-events: none;
+    background-color: $color-text;
+    color: $color-light;
+    opacity: 0.4;
+  }
 }
 
 @keyframes spin {
