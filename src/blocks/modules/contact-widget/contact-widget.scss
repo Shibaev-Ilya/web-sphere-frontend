@@ -1,7 +1,7 @@
 @use 'src/styles/helpers/index' as *;
 
 .contact-widget {
-  background-color: $color-light;
+  background-color: $color-accent-dark;
   position: fixed;
   display: flex;
   bottom: 1rem;
@@ -25,13 +25,13 @@
     }
 
     path {
-      fill: $color-text;
+      fill: $color-light;
       transition: fill $transition;
     }
 
     &:hover {
       path {
-        fill: $color-accent-dark-d10;
+        fill: $color-text;
       }
     }
   }

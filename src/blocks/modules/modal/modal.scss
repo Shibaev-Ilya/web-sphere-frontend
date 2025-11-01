@@ -36,7 +36,7 @@
     padding: 5rem;
     height: 100%;
     clip-path: inset(0 0 0 100%);
-    transition: clip-path $transition;
+    transition: clip-path $transition, border-color $transition;
     max-width: 55rem;
     min-width: 30rem;
 
