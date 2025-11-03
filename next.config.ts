@@ -5,5 +5,5 @@ const nextConfig: NextConfig = {
     includePaths: [path.join(__dirname, 'src')],
   },
 }
- 
+
 export default nextConfig;

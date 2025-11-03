@@ -5,13 +5,7 @@ export default function TopNavigation() {
                 <ul className="header__menu-wrap">
 
                     <li>
-                        <a className="header__menu-item simple-link" href="#">Home</a>
-                    </li>
-                    <li>
-                        <a className="header__menu-item simple-link" href="#">Link 1</a>
-                    </li>
-                    <li>
-                        <a className="header__menu-item simple-link js-header-link" href="#">Anchor 1</a>
+                        <a className="header__menu-item simple-link" href="#">Policy</a>
                     </li>
                 </ul>
                 <CallButton />
