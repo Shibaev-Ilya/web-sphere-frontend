@@ -7,11 +7,11 @@ export default function Advantages() {
         <section className="advantages">
             <div className="container">
             <div className="advantages__inner">
-                <h2 className="header-2">Почему <span className="brand-color">с нами</span> работают?</h2>
+                <h2 className="header-2 js-scroll-animate scroll-animate">Почему <span className="brand-color">с нами</span> работают?</h2>
 
                 <ul className="advantages__list">
                     {advantagesData.map((item, index) => (
-                        <li key={index}>
+                        <li className="js-scroll-animate scroll-animate" key={index}>
                             <p className="advantages__item-title">
                                 <Image src={item.icon} alt="award" width={26} height={26} />
                                 <b>{item.title}</b>

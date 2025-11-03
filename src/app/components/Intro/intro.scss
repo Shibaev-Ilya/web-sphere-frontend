@@ -1,5 +1,4 @@
-@use '../../../styles/helpers/mixins' as mixins;
-@use '../../../styles/helpers/variables' as *;
+@use '../../../styles/helpers/_index.scss' as *;
 
 .intro {
   overflow: hidden;
@@ -8,24 +7,30 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 100rem;
+    max-width: 109rem;
     position: relative;
+
+    @include breakpoint('tablet') {
+      justify-content: flex-end;
+    }
   }
 
   &__title {
-    font-size: 4rem;
+    font-size: 4.2rem;
     text-transform: uppercase;
     font-family: $second-family;
+    font-weight: 600;
+    letter-spacing: 0.1em;
   }
 
   &__subtitle {
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-family: $second-family;
   }
 
   &__text-block {
     z-index: 1;
-    @include mixins.breakpoint('mobile') {
+    @include breakpoint('tablet') {
       position: absolute;
       left: 2rem;
       bottom: 0;
@@ -37,41 +42,25 @@
   }
 
   .focus-in-expand, .text-focus-in {
-    @include mixins.breakpoint('mobile') {
+    @include breakpoint('mobile') {
       animation: none;
     }
   }
 }
 
-.sphere-container {
-  @include mixins.breakpoint('mobile') {
-    width: 100%;
-    transform: translateX(45%);
-  }
-}
-
-.main-wrapper {
-  display: flex;
-  transform-style: preserve-3d;
-  perspective: 40rem;
-  height: 60rem;
-  width: 60rem;
-  inset: 0;
-  align-items: center;
-  justify-content: center;
-
-  @include mixins.breakpoint('mobile') {
-    height: 55rem;
-    width: 100%;
-  }
-}
-
 .sphere-canvas {
-  width: 60rem;
-  height: 60rem;
+  width: 65rem;
+  height: 65rem;
   position: relative;
 
-  @include mixins.breakpoint('mobile') {
-    right: -19rem;
+  @include breakpoint('tablet') {
+    right: -5rem;
+
+  }
+  @include breakpoint('mobile') {
+    right: -31rem;
+    width: 60rem;
+    height: 60rem;
+
   }
 }
