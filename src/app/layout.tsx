@@ -2,6 +2,7 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import { Metadata } from 'next';
 import './globals.scss';
+import Util from './components/Util/Util';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Modal from './components/Modal/Modal';
@@ -20,6 +21,7 @@ export default function RootLayout({
     <html lang="en" data-scroll-behavior="smooth">
       <body>
         <div id="root">
+          <Util />
           <Header />
           {children}
           <Footer />

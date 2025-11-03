@@ -1,5 +1,4 @@
-@use '../helpers/mixins' as mixins;
-@use '../helpers/variables' as *;
+@use '../helpers/index' as *;
 
 h1, h2, h3, h4, h5, h6, ul, ol, p {
   margin: 0;
@@ -21,11 +20,11 @@ html {
   scrollbar-gutter: stable;
   scrollbar-color: $color-text $color-light;
 
-  @include mixins.breakpoint('tablet') {
+  @include breakpoint('tablet') {
     font-size: clamp(4px, 0.97656vw, 10px);
   }
 
-  @include mixins.breakpoint('mobile') {
+  @include breakpoint('mobile') {
     font-size: clamp(4px, 2vw, 10px);
   }
 }
@@ -98,8 +97,12 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
 
-  @include mixins.breakpoint('tablet') {
+  @include breakpoint('tablet') {
     font-size: 4.6rem;
+  }
+
+  @include breakpoint('mobile') {
+    font-size: 3.8rem;
   }
 }
 
@@ -113,11 +116,11 @@ body {
   margin-bottom: 3rem;
   display: block;
 
-  @include mixins.breakpoint('tablet') {
+  @include breakpoint('tablet') {
     font-size: 3.8rem;
   }
 
-  @include mixins.breakpoint('mobile') {
+  @include breakpoint('mobile') {
     font-size: 3.4rem;
   }
 }
@@ -129,8 +132,9 @@ body {
   line-height: 150%;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
+  transition: color 0.2s;
 
-  @include mixins.breakpoint('mobile') {
+  @include breakpoint('mobile') {
     font-size: 2.4rem;
   }
 }
@@ -199,7 +203,7 @@ body {
 }
 
 .simple-button {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   line-height: 150%;
   padding: 1rem 2rem;
   background-color: $color-text;
@@ -209,7 +213,7 @@ body {
   width: fit-content;
   height: fit-content;
 
-  @include mixins.breakpoint('tablet') {
+  @include breakpoint('tablet') {
     font-size: 2.4rem;
   }
 
