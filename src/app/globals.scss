@@ -1,1 +1,6 @@
-@use '../styles/base/general'
+// CSS-файлы библиотек
+@use "../styles/vendor/libs";
+
+// Основное
+@use "../styles/base/fonts";
+@use '../styles/base/general';
