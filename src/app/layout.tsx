@@ -6,6 +6,7 @@ import Util from './components/Util/Util';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Modal from './components/Modal/Modal';
+import Widget from './components/Widget/Widget';
 
 export const metadata: Metadata = {
   title: 'Web Sphere - Digital агентство',
@@ -26,6 +27,7 @@ export default function RootLayout({
           {children}
           <Footer />
           <Modal />
+          <Widget />
         </div>
       </body>
     </html>

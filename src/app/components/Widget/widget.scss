@@ -1,0 +1,41 @@
+@use '../../../styles/helpers/index' as *;
+
+.contact-widget {
+  background-color: $color-accent-dark;
+  position: fixed;
+  display: flex;
+  bottom: 1rem;
+  right: -2rem;
+  box-shadow: 0 5px 8px 0 rgba(34, 60, 80, 0.2);
+  padding-right: 2rem;
+  border-radius: 3rem 0 0 3rem;
+  z-index: 2;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+
+  img {
+    width: 3.5rem;
+    height: 3.5rem;
+
+    @include breakpoint("mobile") {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+    transition: filter $transition;
+
+    &:hover {
+      filter: invert(8%) sepia(6%) saturate(1832%) hue-rotate(130deg) brightness(93%) contrast(93%);
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+}
