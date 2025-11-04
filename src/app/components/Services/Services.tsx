@@ -13,7 +13,7 @@ export default function Services() {
                 {
                   dataServices.map(({ id, title, description, imageSrc }) => (
 
-                    <div key={id} className={`services__item ${id === 1 ? 'services__item_wide' : ''} js-open-modal js-scroll-animate scroll-animate scroll-animate_top`} data-modal-id="callback">
+                    <div key={id} className={`services__item ${id === 1 ? 'services__item_wide' : ''} js-open-modal js-scroll-animate scroll-animate ${id === 1 ? 'scroll-animate_top' : id === 2 ? 'scroll-animate_left' : 'scroll-animate_right'}`} data-modal-id="callback">
 
                       <div className="services__image">
                           <Image className="services__landings-img" src={imageSrc} alt="service" width={396} height={360}/>

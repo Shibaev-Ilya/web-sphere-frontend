@@ -1,0 +1,142 @@
+@use '../../../styles/helpers/index' as *;
+@use "sass:color";
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  border: 1px solid #a6a6a6;
+  border-radius: $border-radius-small;
+  padding: 2rem 2rem;
+  font-size: 2.2rem;
+  background-color: $color-light;
+  width: 100%;
+  transition: box-shadow $transition;
+}
+
+input[type="checkbox"] {
+  accent-color: $color-text;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  transition: box-shadow $transition;
+}
+
+input[type="submit"] {
+  padding: 1.5rem 2rem;
+  font-size: 2.4rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  width: 100%;
+
+  &:disabled {
+    pointer-events: none;
+    background-color: $color-text;
+    color: $color-light;
+    opacity: 0.4;
+  }
+}
+
+.checkbox-label {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.8rem;
+  color: color.scale($color-text, $lightness: 30%, $space: oklch);
+  align-items: center;
+
+  a {
+    text-decoration: underline;
+    transition: $transition;
+    color: color.scale($color-text, $lightness: 30%, $space: oklch);
+
+    &:hover {
+      color: $color-accent-dark-d10;
+    }
+  }
+}
+
+.form, .wpcf7-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 71rem;
+  position: relative;
+
+  &.submitting {
+    opacity: 0.6;
+    pointer-events: none;
+
+    * {
+      cursor: not-allowed;
+    }
+
+    input, select, textarea {
+      opacity: 0.4;
+    }
+  }
+}
+
+.wpcf7-spinner {
+  position: absolute;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  box-sizing: border-box;
+  border: 5px solid rgba(20,20,20,0.2);
+  border-top-color: $color-text;
+  border-radius: 50%;
+  animation: spin 0.85s linear infinite;
+  background-color: transparent;
+  top: 30%;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  &::before {
+    display:none;
+  }
+}
+
+.wpcf7-response-output {
+  display: none;
+}
+
+.wpcf7-not-valid {
+  &:not(.wpcf7-acceptance) {
+    box-shadow: 3px 3px 0 0 $color-accent-bright;
+  }
+  input {
+    box-shadow: 3px 3px 0 0 $color-accent-bright;
+  }
+}
+
+.wpcf7-not-valid-tip {
+  display: none!important;
+}
+
+.wpcf7-acceptance .wpcf7-list-item {
+  margin-left: 0;
+
+  label {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.8rem;
+    color: color.scale($color-text, $lightness: 30%, $space: oklch);
+    align-items: center;
+
+    a {
+      text-decoration: underline;
+      transition: $transition;
+      color: color.scale($color-text, $lightness: 30%, $space: oklch);
+
+      &:hover {
+        color: $color-accent-dark-d10;
+      }
+    }
+  }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

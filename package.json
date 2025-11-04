@@ -19,6 +19,7 @@
     },
     "devDependencies": {
         "@types/react": "19.2.2",
+        "babel-plugin-react-compiler": "^1.0.0",
         "bem-tools-core": "bem-tools/bem-tools-core",
         "bem-tools-create": "bem-tools/bem-tools-create",
         "browser-sync": "^2.27.7",

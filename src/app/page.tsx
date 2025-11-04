@@ -3,7 +3,7 @@ import IntroText from "./components/IntroText/IntroText";
 import Advantages from "./components/Advantages/Advantages";
 import Services from "./components/Services/Services";
 import Marquee from "./components/Marquee/Marquee";
-import FeedbackForm from "./components/FeedbackForm/FeedbackForm";
+import Feedback from "./components/Feedback/Feedback";
 
 export default function Page() {
   return (
@@ -13,7 +13,7 @@ export default function Page() {
     <Services />
     <Advantages />
     <Marquee />
-    <FeedbackForm />
+    <Feedback />
   </main>
   );
 }
