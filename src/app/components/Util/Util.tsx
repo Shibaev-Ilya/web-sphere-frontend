@@ -26,11 +26,6 @@ export default function Util() {
                         cookieNotification.classList.add("show");
                     }, 1000);
                 }
-
-                cookieAccept.addEventListener("click", function() {
-                    localStorage.setItem("cookieNotificationLastShown", new Date().toISOString());
-                    cookieNotification.style.display = "none";
-                });
             }
         }
 
