@@ -7,6 +7,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Modal from './components/Modal/Modal';
 import Widget from './components/Widget/Widget';
+import CookiePolicy from './components/Cookie/Cookie';
 
 export const metadata: Metadata = {
   title: 'Web Sphere - Digital агентство',
@@ -28,6 +29,7 @@ export default function RootLayout({
           <Footer />
           <Modal />
           <Widget />
+          <CookiePolicy />
         </div>
       </body>
     </html>
