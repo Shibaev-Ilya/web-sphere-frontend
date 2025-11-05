@@ -13,6 +13,7 @@
 .shake-right {
   animation: shake-right 8s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
   will-change: transform;
+  transform-origin: center;
 }
 
 .scroll-animate {
@@ -55,7 +56,6 @@
 @keyframes shake-right {
   0% {
     transform: rotate(0deg);
-    transform-origin: 100% 50%;
   }
   50% {
     transform: rotate(0);
@@ -92,6 +92,5 @@
   }
   100% {
     transform: rotate(0deg);
-    transform-origin: 100% 50%;
   }
 }

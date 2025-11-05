@@ -178,6 +178,7 @@ body {
   display: block;
   text-align: center;
   font-size: 2rem;
+  line-height: 80%;
   padding: 2rem 3rem;
   border: 1px solid $color-text;
   transition: 0.4s;
@@ -204,9 +205,11 @@ body {
 
 .simple-button {
   font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
   line-height: 150%;
   padding: 1rem 2rem;
-  background-color: $color-text;
+  background-color: $color-accent-dark;
   color: $color-light;
   border-radius: $border-radius-small;
   text-transform: uppercase;
@@ -218,21 +221,21 @@ body {
   }
 
   &:hover {
-    background-color: $color-accent-dark-d10;
+    background-color: $color-text;
   }
 
   &_light {
-    background-color: $color-accent-dark-d10;
+    background-color: $color-accent-dark;
     color: $color-light;
 
     &:hover {
-      background-color: $color-accent-dark;
+      background-color: $color-accent-dark-d10;
     }
   }
 }
 
 .brand-color {
-  color: $color-accent-dark-d10;
+  color: $color-accent-dark;
 }
 
 .bold {

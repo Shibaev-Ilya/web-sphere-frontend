@@ -81,6 +81,10 @@
     justify-content: space-between;
     align-items: center;
 
+    @include breakpoint('tablet') {
+      align-items: flex-end;
+    }
+
     @include breakpoint('mobile') {
       flex-direction: column-reverse;
       align-items: flex-start;

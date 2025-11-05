@@ -3,12 +3,13 @@
 .form-section {
   padding: 8rem 0;
   position: relative;
-  background-image: url("../img/sprites/sprite.svg#logo"), $bg-gradient;
+  background-image: $bg-gradient;
   background-repeat: no-repeat;
-  background-position: 120%, center;
-  background-size: 50%, cover;
+  background-position: center;
+  background-size: cover;
 
   @include breakpoint('tablet') {
+    background-image: url("../img/sprites/sprite.svg#logo"), $bg-gradient;
     background-position: 142%, center;
     background-size: 72%, cover;
   }
@@ -31,8 +32,34 @@
   .container {
     position: relative;
     z-index: 2;
+    display: flex;
+    align-items: center;
+
     @include breakpoint('tablet') {
       backdrop-filter: blur(6px);
+    }
+  }
+
+  &__text {
+    font-size: 12rem;
+    font-weight: 700;
+    text-align: end;
+    font-family: $second-family;
+    line-height: 1;
+    letter-spacing: 0;
+    display: block;
+    background-color: transparent;
+    background-image: linear-gradient(161deg, rgb(255, 255, 255) 55%, rgb(0, 194, 177) 52%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-backface-visibility: hidden;
+  }
+
+  &__text-wrap {
+    flex: 1;
+    @include breakpoint('tablet') {
+      display: none;
     }
   }
 }

@@ -27,17 +27,21 @@
     }
   }
 
-  &__item-title {
-    font-weight: 600;
-    font-size: 2.4rem;
-    font-family: $second-family;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  p {
+    font-size: 2rem;
 
-    svg {
-      width: 3rem;
-      height: 3rem;
+    &.advantages__item-title {
+      font-weight: 600;
+      font-size: 2.4rem;
+      font-family: $second-family;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      svg {
+        width: 3rem;
+        height: 3rem;
+      }
     }
   }
 }

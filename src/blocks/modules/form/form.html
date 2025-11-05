@@ -1,36 +1,41 @@
 <section class="form-section" id="contact-us">
     <div class="container">
-        <p class="form-section__title header-2 js-scroll-animate scroll-animate">Напишите нам</p>
-        <p class="form-section__subtitle js-scroll-animate scroll-animate">И мы свяжемся с вами в ближайшее время и обсудим детали работ</p>
-        <form class="form js-scroll-animate scroll-animate">
-            <input type="hidden" name="type" value="form">
-            <input type="hidden" name="form_id" value="callback">
-            <input type="hidden" name="form_name" value="Callback">
-            <label>
-                <input type="text" name="name" placeholder="Имя"/>
-            </label>
-            <label>
-                <input type="tel" name="phone" placeholder="Телефон*">
-            </label>
-            <label>
-                <input type="email" name="email" placeholder="Email">
-            </label>
-            <label>
-                <textarea name="message" cols="30" rows="5" placeholder="Дополнительная информация о проекте"></textarea>
-            </label>
-            <label class="checkbox-label">
-                <input type="checkbox" name="agree" required/>
-                <span>
+        <div class="form-section__form-wrap">
+            <p class="form-section__title header-2 js-scroll-animate scroll-animate">Напишите нам</p>
+            <p class="form-section__subtitle js-scroll-animate scroll-animate">И мы свяжемся с вами в ближайшее время и обсудим детали работ</p>
+            <form class="form js-scroll-animate scroll-animate">
+                <input type="hidden" name="type" value="form">
+                <input type="hidden" name="form_id" value="callback">
+                <input type="hidden" name="form_name" value="Callback">
+                <label>
+                    <input type="text" name="name" placeholder="Имя"/>
+                </label>
+                <label>
+                    <input type="tel" name="phone" placeholder="Телефон*">
+                </label>
+                <label>
+                    <input type="email" name="email" placeholder="Email">
+                </label>
+                <label>
+                    <textarea name="message" cols="30" rows="5" placeholder="Дополнительная информация о проекте"></textarea>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="agree" required/>
+                    <span>
                         Согласен на <a href="/agreement" target="_blank">обработку персональных данных</a>
                     </span>
-            </label>
-            <label class="checkbox-label">
-                <input type="checkbox" name="agree" required/>
-                <span>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="agree" required/>
+                    <span>
                         Ознакомлен с <a href="/policy" target="_blank" class="">политикой конфиденциальности</a>
                     </span>
-            </label>
-            <input type="submit" class="simple-button simple-button_light" value="Отправить">
-        </form>
+                </label>
+                <input type="submit" class="simple-button simple-button_light" value="Отправить">
+            </form>
+        </div>
+        <div class="form-section__text-wrap">
+            <p class="form-section__text js-scroll-animate scroll-animate">WEB <br>SPHERE</p>
+        </div>
     </div>
 </section>

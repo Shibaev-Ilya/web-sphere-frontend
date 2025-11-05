@@ -105,10 +105,10 @@ input[type="submit"] {
 
 .wpcf7-not-valid {
   &:not(.wpcf7-acceptance) {
-    box-shadow: 3px 3px 0 0 $color-accent-bright;
+    outline: 2px solid $color-accent-bright;
   }
   input {
-    box-shadow: 3px 3px 0 0 $color-accent-bright;
+    outline: 2px solid $color-accent-bright;
   }
 }
 

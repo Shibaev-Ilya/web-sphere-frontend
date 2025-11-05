@@ -13,23 +13,6 @@
   display: flex;
   justify-content: flex-end;
 
-  &_info {
-    justify-content: center;
-    align-items: center;
-  }
-
-  &_success {
-    .modal__wrapper {
-      border-color: $color-accent-dark-d10!important;
-    }
-  }
-
-  &_error {
-    .modal__wrapper {
-      border-color: $color-accent-bright-d10!important;
-    }
-  }
-
   &__wrapper {
     position: relative;
     background-color: white;
@@ -46,13 +29,35 @@
   }
 
   &_info {
+    justify-content: center;
+    align-items: center;
+
     .modal__wrapper {
       clip-path: inset( 0 0 100% 0);
       height: fit-content;
-      border-radius: $border-radius-small;
-      @include custom-border(16px, $color_text)
+      border-radius: $border-radius-big;
+      border: 4px solid $color-text;
+
+      @include breakpoint('mobile') {
+        border-radius: $border-radius-small;
+        width: 100%;
+        margin: 0 20px;
+      }
     }
   }
+
+  &_success {
+    .modal__wrapper {
+      border-color: $color-accent-dark-d10!important;
+    }
+  }
+
+  &_error {
+    .modal__wrapper {
+      border-color: $color-accent-bright-d10!important;
+    }
+  }
+
 
   &__title {
     font-size: 3rem;
@@ -61,7 +66,7 @@
 
   &__text {
     font-size: 2.2rem;
-    text-align: initial;
+    text-align: center;
   }
 
   &__btn-close {
