@@ -26,6 +26,7 @@
     padding-top: 1.2rem;
     padding-bottom: 1.2rem;
     overflow: hidden;
+    border-bottom: 1px solid rgba($color-text, 0.2);
 
     @include breakpoint('mobile') {
       padding: 1.2rem 0;
@@ -270,5 +271,11 @@
         color: $color_accent-dark;
       }
     }
+  }
+}
+
+.net {
+  .header__container {
+    border-bottom: 1px solid transparent;
   }
 }

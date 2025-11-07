@@ -33,15 +33,11 @@
         <link rel="stylesheet" href="styles/main.css">
 
     </head>
-    <body class="net">
+    <body>
         @@include("../blocks/modules/header/header.html", { "mainPage" : true, "currentPage" : "main", "isContactForm" : true})
         <main class="main">
-           @@include("../blocks/modules/intro/intro.html")
-           @@include("../blocks/modules/intro-text/intro-text.html")
-            @@include("../blocks/modules/services/services.html")
-            @@include("../blocks/modules/marquee/marquee.html")
-            @@include("../blocks/modules/form/form.html")
-           @@include("../blocks/modules/advantages/advantages.html")
+           @@include("../blocks/modules/breadcrumbs/breadcrumbs.html")
+           @@include("../blocks/modules/single-post/single-post.html")
         </main>
         @@include("../blocks/modules/footer/footer.html", { "mainPage" : true, "currentPage" : "main", "isContactForm" : true})
         @@include("../blocks/modules/modal/modal.html")

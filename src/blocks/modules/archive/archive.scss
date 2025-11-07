@@ -28,9 +28,7 @@
   &__preview {
     border: 1px solid #e1e2e3;
     padding: 2rem;
-    box-shadow: 0 1px 5px -4px #242424b3, 0 4px 8px #2424240d;
-    background-color: $color-light;
-    border-radius: $border-radius-small;
+    @include card($color-light, $border-radius-small);
     display: flex;
     flex-direction: column;
     gap: 3rem;

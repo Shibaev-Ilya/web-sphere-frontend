@@ -23,3 +23,9 @@ $breakpoints: (
   border-bottom: 2px solid $color;
   border-left: 16px solid $color;
 }
+
+@mixin card( $color: #ffffff, $border-radius-small: 2rem) {
+  box-shadow: 0 1px 5px -4px #242424b3, 0 4px 8px #2424240d;
+  background-color: $color;
+  border-radius:  $border-radius-small;
+}
