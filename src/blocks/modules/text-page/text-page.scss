@@ -1,7 +1,7 @@
 @use 'src/styles/helpers/index' as *;
 
 .text-page {
-  padding-top: 6rem;
+  padding-top: 2rem;
   padding-bottom: 6rem;
 
   @include breakpoint('mobile') {

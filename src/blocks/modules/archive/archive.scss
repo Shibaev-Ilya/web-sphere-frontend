@@ -1,14 +1,14 @@
 @use 'src/styles/helpers/index' as *;
 
 .archive {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  background-color: $color-content-background;
-  box-shadow: 0 0 0 100vmax $color-content-background;
-  clip-path: inset(0 -100vmax);
 
-  @include breakpoint('mobile') {
-    padding-bottom: 2rem;
+  &-page {
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+
+    @include breakpoint('mobile') {
+      padding-bottom: 2rem;
+    }
   }
 
   &__wrapper {
@@ -82,6 +82,44 @@
 
   &__preview-footer {
     margin-top: auto;
+  }
+
+  &__pagination {
+
+    .nav-links {
+      display: flex;
+      padding: 5rem 0 2rem;
+      gap: 1rem;
+    }
+
+    .page-numbers {
+      box-sizing: border-box;
+      text-transform: none;
+      background-image: none;
+      cursor: pointer;
+      margin: 0;
+      padding: 0.4rem 1.3rem;
+      font-size: 2.2rem;
+      line-height: 130%;
+      background-color: $color-light;
+      color: $color-text;
+      border: 1px solid #e3e3e3;
+      border-radius: calc($border-radius-small/2);
+      transition: box-shadow $transition;
+
+      &:hover {
+        box-shadow: 0 1px 5px -4px #242424b3, 0 4px 8px #2424240d;
+      }
+
+      &.current {
+        border-color: $color-text;
+
+        &:hover {
+          box-shadow: none;
+        }
+      }
+
+    }
   }
 
 }
