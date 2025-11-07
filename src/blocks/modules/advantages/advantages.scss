@@ -7,6 +7,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
+    padding-left: 0;
+    margin-bottom: 0;
 
     @include breakpoint('mobile') {
       flex-direction: column;
@@ -29,6 +31,10 @@
 
   p {
     font-size: 2rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     &.advantages__item-title {
       font-weight: 600;

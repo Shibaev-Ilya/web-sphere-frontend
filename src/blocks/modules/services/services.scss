@@ -111,6 +111,10 @@
 
     p {
       font-size: 2rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
