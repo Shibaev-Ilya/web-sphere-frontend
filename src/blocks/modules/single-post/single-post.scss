@@ -23,6 +23,10 @@
       font-size: 2.2rem;
       font-family: $second-family;
       text-transform: uppercase;
+
+      @include breakpoint('mobile') {
+        font-size: 1.7rem;
+      }
        a {
          color: $color-text;
 
@@ -40,6 +44,10 @@
     align-self: flex-start;
     position: sticky;
     top: 10rem;
+
+    @include breakpoint('tablet') {
+      display: none;
+    }
   }
 
 }
