@@ -29,11 +29,19 @@
   &_left {
     transform: translateX(-50px);
     will-change: opacity, transform;
+
+    @include breakpoint('mobile') {
+      transform: translateX(0) translateY(50px);
+    }
   }
 
   &_right {
     transform: translateX(50px);
     will-change: opacity, transform;
+
+    @include breakpoint('mobile') {
+      transform: translateX(0) translateY(50px);
+    }
   }
 
   &.visible {

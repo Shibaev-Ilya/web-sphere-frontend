@@ -1,7 +1,7 @@
 @use 'src/styles/helpers/index' as *;
 
 .services {
-
+  overflow: hidden;
   padding: 6rem 0;
 
   &__list {
@@ -108,6 +108,10 @@
     flex-direction: column;
     gap: 2rem;
     transition: background-color $transition;
+
+    .header-3 {
+      margin: 0;
+    }
 
     p {
       font-size: 2rem;

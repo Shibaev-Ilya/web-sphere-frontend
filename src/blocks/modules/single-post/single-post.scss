@@ -5,6 +5,24 @@
   &__article {
     @include card($color-light, $border-radius-small);
     padding: 4rem 3rem;
+
+    @include breakpoint('mobile') {
+      padding: 3rem 0;
+      border-bottom: 1px solid $color-text;
+      border-top: 1px solid $color-text;
+      box-shadow: none;
+      background-color: transparent;
+      border-radius: 0;
+    }
+
+    img {
+      margin-bottom: 4rem;
+      border-radius: $border-radius-big;
+
+      @include breakpoint('mobile') {
+        border-radius: $border-radius-small;
+      }
+    }
   }
 
   &__wrapper {

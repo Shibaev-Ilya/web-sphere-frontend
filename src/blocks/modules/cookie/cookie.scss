@@ -16,10 +16,15 @@
 
   @include breakpoint("mobile") {
     width: 60vw;
+    left: 1rem;
   }
 
   &.show {
     bottom: 2rem;
+
+    @include breakpoint("mobile") {
+      bottom: 1rem;
+    }
   }
 
   &__inner {
