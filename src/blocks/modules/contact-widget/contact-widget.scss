@@ -6,7 +6,7 @@
   display: flex;
   bottom: 2rem;
   right: 2rem;
-  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: var(--box-shadow);
   border-radius: 3rem;
   z-index: 2;
 
@@ -29,13 +29,13 @@
     }
 
     path {
-      fill: $color-light;
+      fill:  var(--color-light);
       transition: fill $transition;
     }
 
     &:hover {
       path {
-        fill: $color-text;
+        fill: var(--color-text);
       }
     }
   }

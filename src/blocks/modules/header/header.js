@@ -38,3 +38,31 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+const toggleSwitch = document.querySelector(".theme-switch input[type=\"checkbox\"]");
+const currentTheme = localStorage.getItem("theme");
+export let isDark = false;
+
+if (currentTheme) {
+    document.documentElement.setAttribute("data-theme", currentTheme);
+    document.body.classList.add(`theme-${currentTheme}`);
+
+    if (currentTheme === "dark") {
+        toggleSwitch.checked = true;
+        isDark = true;
+    }
+}
+
+function switchTheme(e) {
+    isDark = !isDark;
+    if (e.target.checked) {
+        document.body.classList.add("theme-dark");
+        localStorage.setItem("theme", "dark");
+    }
+    else {
+        document.body.classList.remove("theme-dark");
+        localStorage.setItem("theme", "light");
+    }
+}
+
+toggleSwitch.addEventListener("change", switchTheme, false);

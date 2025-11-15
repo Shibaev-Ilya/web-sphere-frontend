@@ -1,5 +1,13 @@
 @use 'src/styles/helpers/index' as *;
 
+:root {
+  @include light-theme;
+}
+
+.theme-dark {
+  @include dark-theme;
+}
+
 h1, h2, h3, h4, h5, h6, ul, ol, p {
   margin: 0;
   padding: 0;
@@ -8,10 +16,15 @@ h1, h2, h3, h4, h5, h6, ul, ol, p {
 
 * {
   box-sizing: border-box;
+  transition: color $transition,
+  border-color $transition,
+  box-shadow $transition,
+  fill $transition,
+  stroke $transition;
 
   &::selection {
     background-color: $color-accent-dark;
-    color: $color-light;
+    color: var(--color-light);
   }
 }
 
@@ -19,7 +32,7 @@ html {
   font-size: clamp(4px, 0.52083vw, 10px);
   scroll-behavior: smooth;
   scrollbar-gutter: stable;
-  scrollbar-color: $color-text $color-light;
+  scrollbar-color: var(--color-text) var(--color-light);
 
   @include breakpoint('tablet') {
     font-size: clamp(4px, 0.97656vw, 10px);
@@ -32,14 +45,14 @@ html {
 
 body {
   font-family: $font-family;
-  color: $color-text;
+  color: var(--color-text);
   font-weight: 400;
   font-size: 1.6rem;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   padding-bottom: 5rem;
-  background-color: $color-content-background;
+  background-color: var(--color-content-background);
   background-size: 4rem 4rem;
   overflow-x: hidden;
 
@@ -61,7 +74,9 @@ body {
   }
 
   &.net {
+    //background-image: url("../img/sprites/bg-grid-hero-m.svg");
     background-image: linear-gradient(rgba(#adadad, 0.1) 2px, transparent 2px), linear-gradient(90deg, rgba(#adadad, 0.1) 2px, transparent 2px);
+    //background-size: contain;
   }
 }
 
@@ -176,14 +191,14 @@ h2 {
   }
 
   &::before {
-    border-top: 1px solid $color-text;
-    border-bottom: 1px solid $color-text;
+    border-top: 1px solid var(--color-text);
+    border-bottom: 1px solid var(--color-text);
     transform: scale3d(0, 1, 1);
   }
 
   &::after {
-    border-left: 1px solid $color-text;
-    border-right: 1px solid $color-text;
+    border-left: 1px solid var(--color-text);
+    border-right: 1px solid var(--color-text);
     transform: scale3d(1, 0, 1);
   }
 
@@ -200,26 +215,26 @@ h2 {
   font-size: 2rem;
   line-height: 80%;
   padding: 2rem 3rem;
-  border: 1px solid $color-text;
+  border: 1px solid var(--color-dark-border);
   transition: 0.4s;
   text-decoration: none;
-  color: $color-text;
+  color: var(--color-text);
   border-radius: $border-radius-small;
-  box-shadow: 0 4px 0 0 $color-text;
-  background-color: #ffffff;
+  box-shadow: 0 4px 0 0 var(--color-dark-border);
+  background-color: var(--color-light);
   cursor: pointer;
   text-transform: uppercase;
 
     &:hover {
     transform: translate(0, -2px);
-    color: $color-text;
-    box-shadow: 0 6px 0 0 $color-text;
-    border-color: $color-text;
+    color: var(--color-text);
+    box-shadow: 0 6px 0 0 var(--color-dark-border);
+    border-color: var(--color-dark-border);
   }
 
   &:visited {
-    color: $color-text;
-    border-color: $color-text;
+    color: var(--color-text);
+    border-color: var(--color-text);
   }
 }
 
@@ -230,7 +245,7 @@ h2 {
   line-height: 150%;
   padding: 1rem 2rem;
   background-color: $color-accent-dark;
-  color: $color-light;
+  color: var(--color-light);
   border-radius: $border-radius-small;
   text-transform: uppercase;
   width: fit-content;
@@ -241,12 +256,12 @@ h2 {
   }
 
   &:hover {
-    background-color: $color-text;
+    background-color: var(--color-text);
   }
 
   &_light {
     background-color: $color-accent-dark;
-    color: $color-light;
+    color: var(--color-light);
 
     &:hover {
       background-color: $color-accent-dark-d10;

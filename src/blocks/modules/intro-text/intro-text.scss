@@ -1,7 +1,7 @@
 @use 'src/styles/helpers/index' as *;
 
 .intro-text {
-  background-image: $bg-gradient;
+  background-image: var(--bg-gradient);
   padding: 7rem 0;
 
   @include breakpoint('mobile') {
@@ -38,6 +38,10 @@
     svg {
       width: 2rem;
       height: 2rem;
+
+      path {
+        stroke: var(--color-text);
+      }
     }
   }
 }

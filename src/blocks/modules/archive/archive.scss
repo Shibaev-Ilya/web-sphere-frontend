@@ -28,7 +28,7 @@
   &__preview {
     border: 1px solid #e1e2e3;
     padding: 2rem;
-    @include card($color-light, $border-radius-small);
+    @include card( var(--color-light), $border-radius-small);
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -57,7 +57,7 @@
     margin: 0;
 
     a {
-      color: $color-text;
+      color: var(--color-text);
 
       &:hover {
         color: $color-accent-dark;
@@ -68,7 +68,7 @@
 
   &__preview-more {
     font-size: 1.8rem;
-    color: $color-text;
+    color: var(--color-text);
     text-align: right;
     width: 100%;
     display: block;
@@ -99,8 +99,8 @@
       padding: 0.4rem 1.3rem;
       font-size: 2.2rem;
       line-height: 130%;
-      background-color: $color-light;
-      color: $color-text;
+      background-color:  var(--color-light);
+      color: var(--color-text);
       border: 1px solid #e3e3e3;
       border-radius: calc($border-radius-small/2);
       transition: box-shadow $transition;
@@ -110,7 +110,7 @@
       }
 
       &.current {
-        border-color: $color-text;
+        border-color: var(--color-text);
 
         &:hover {
           box-shadow: none;

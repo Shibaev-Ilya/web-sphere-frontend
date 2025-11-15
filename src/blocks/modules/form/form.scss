@@ -11,13 +11,14 @@ textarea {
   border-radius: $border-radius-small;
   padding: 2rem 2rem;
   font-size: 2.2rem;
-  background-color: $color-light;
+  background-color: var(--color-light);
   width: 100%;
   transition: box-shadow $transition;
+  color: var(--color-text);
 }
 
 input[type="checkbox"] {
-  accent-color: $color-text;
+  accent-color: var(--color-text);
   width: 2rem;
   height: 2rem;
   cursor: pointer;
@@ -34,8 +35,8 @@ input[type="submit"], button[type="submit"] {
 
   &:disabled {
     pointer-events: none;
-    background-color: $color-text;
-    color: $color-light;
+    background-color: var(--color-text);
+    color: var(--color-light);
     opacity: 0.4;
   }
 }
@@ -44,13 +45,13 @@ input[type="submit"], button[type="submit"] {
   display: flex;
   gap: 1rem;
   font-size: 1.8rem;
-  color: color.scale($color-text, $lightness: 30%, $space: oklch);
+  color:  var(--color-text);
   align-items: center;
 
   a {
     text-decoration: underline;
     transition: $transition;
-    color: color.scale($color-text, $lightness: 30%, $space: oklch);
+    color:  var(--color-text);
 
     &:hover {
       color: $color-accent-dark-d10;
@@ -87,7 +88,7 @@ input[type="submit"], button[type="submit"] {
   height: 48px;
   box-sizing: border-box;
   border: 5px solid rgba(20,20,20,0.2);
-  border-top-color: $color-text;
+  border-top-color: var(--color-text);
   border-radius: 50%;
   animation: spin 0.85s linear infinite;
   background-color: transparent;
@@ -125,13 +126,13 @@ input[type="submit"], button[type="submit"] {
     display: flex;
     gap: 1rem;
     font-size: 1.8rem;
-    color: color.scale($color-text, $lightness: 30%, $space: oklch);
+    color:  var(--color-text);
     align-items: center;
 
     a {
       text-decoration: underline;
       transition: $transition;
-      color: color.scale($color-text, $lightness: 30%, $space: oklch);
+      color:  var(--color-text);
 
       &:hover {
         color: $color-accent-dark-d10;

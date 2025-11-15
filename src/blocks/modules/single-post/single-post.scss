@@ -3,13 +3,13 @@
 .single-post {
 
   &__article {
-    @include card($color-light, $border-radius-small);
+    @include card(var(--color-light), $border-radius-small);
     padding: 4rem 3rem;
 
     @include breakpoint('mobile') {
       padding: 3rem 0;
-      border-bottom: 1px solid $color-text;
-      border-top: 1px solid $color-text;
+      border-bottom: 1px solid var(--color-text);
+      border-top: 1px solid var(--color-text);
       box-shadow: none;
       background-color: transparent;
       border-radius: 0;
@@ -46,7 +46,7 @@
         font-size: 1.7rem;
       }
        a {
-         color: $color-text;
+         color: var(--color-text);
 
          &:hover {
            color: $color-accent-dark
@@ -57,7 +57,7 @@
 
   &__sidebar {
     flex: 1;
-    @include card($color-light, $border-radius-small);
+    @include card(var(--color-light), $border-radius-small);
     padding: 4rem 3rem;
     align-self: flex-start;
     position: sticky;

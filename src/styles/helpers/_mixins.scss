@@ -16,7 +16,7 @@ $breakpoints: (
   }
 }
 
-@mixin custom-border($radius: 16px, $color: #141414) {
+@mixin custom-border($radius: 1rem, $color: #141414) {
   border-radius: $radius;
   border-top: 2px solid $color;
   border-right: 2px solid $color;

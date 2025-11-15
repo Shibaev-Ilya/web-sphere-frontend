@@ -12,7 +12,7 @@
   left: 0;
   right: 0;
   z-index: 9;
-  background-image: linear-gradient(180deg,rgba($color-content-background, 0.8) 95%, rgba(0, 0, 0, 0) 100%);
+  background-image: linear-gradient(180deg, var(--color-header-background) 95%, rgba(0, 0, 0, 0) 100%);
   backdrop-filter: blur(10px);
 
   @include breakpoint('tablet') {
@@ -26,7 +26,7 @@
     padding-top: 1.2rem;
     padding-bottom: 1.2rem;
     overflow: hidden;
-    border-bottom: 1px solid rgba($color-text, 0.2);
+    border-bottom: 1px solid rgba(var(--color-text), 0.2);
 
     @include breakpoint('mobile') {
       padding: 1.2rem 0;
@@ -47,12 +47,17 @@
     width: 5rem;
     height: 5rem;
     object-fit: contain;
+
+    use {
+      transition: $transition;
+      fill: var(--color-text);
+    }
   }
 
   &__logo-text {
     font-size: 1.7rem;
     letter-spacing: 0.3rem;
-    color: $color-text;
+    color: var(--color-text);
     font-family: $second-family;
   }
 
@@ -82,7 +87,7 @@
       a {
         display: block;
         padding: 1rem 2rem;
-        color: $color-text;
+        color: var(--color-text);
         transition: background-color $transition, color $transition;
         border-radius: $border-radius-small;
         font-size: 1.8rem;
@@ -103,13 +108,13 @@
           transform-origin: center;
         }
         &::before {
-          border-top: 1px solid $color-text;
-          border-bottom: 1px solid $color-text;
+          border-top: 1px solid var(--color-text);
+          border-bottom: 1px solid var(--color-text);
           transform: scale3d(0, 1, 1);
         }
         &::after {
-          border-left: 1px solid $color-text;
-          border-right: 1px solid $color-text;
+          border-left: 1px solid var(--color-text);
+          border-right: 1px solid var(--color-text);
           transform: scale3d(1, 0, 1);
         }
         &:hover::before,
@@ -146,7 +151,7 @@
       height: 100vh;
       top: 0;
       right: 0;
-      background-color: $color-light;
+      background-color: var(--color-light);
       flex-direction: column;
     }
   }
@@ -169,14 +174,14 @@
       height: 2px;
       left: 1.5rem;
       top: 3rem;
-      background-color: $color-text;
+      background-color: var(--color-text);
 
       &:before, &:after{
         transition: all 0.25s;
         width: 3rem;
         height: 2px;
         left: 0;
-        background: $color-text;
+        background: var(--color-text);
         position: absolute;
         content: '';
       }
@@ -225,7 +230,7 @@
   &__email {
     width: 100%;
     font-size: 2.4rem;
-    color: $color-text;
+    color: var(--color-text);
   }
 
   &__links {
@@ -249,7 +254,7 @@
       }
 
       path {
-        fill: $color-text;
+        fill: var(--color-text);
         transition: fill $transition;
       }
 

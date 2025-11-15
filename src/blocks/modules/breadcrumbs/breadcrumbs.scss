@@ -15,7 +15,7 @@
     font-size: 1.8rem;
 
     a {
-      color: $color-text;
+      color: var(--color-text);
 
       &:hover {
         color: $color-accent-dark

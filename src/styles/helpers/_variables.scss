@@ -1,21 +1,85 @@
 @use "src/styles/helpers/mixins";
 @use 'sass:color';
 
+// Светлая тема (ваши исходные переменные)
 $color-dark: #000000;
 $color-light: #ffffff;
 $color-accent-bright: #FF6D2C;
 $color-accent-bright-d10: color.adjust($color-accent-bright, $lightness: -20%);
 $color-accent-dark: #00c2b1;
+$color-accent-dark-bg: #00c2b1;
 $color-accent-dark-d10: color.adjust($color-accent-dark, $lightness: -10%);
 $color-text: #141414;
-$color-text-light: #F9FAFB;
+$color-text-light: #fafafa;
+$color-dark-border: #141414;
+$box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.3);
 
 $color-content-background: #F4F4F4;
 $bg-gradient: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, $color-content-background 9%, $color-content-background 91%, rgba(255, 255, 255, 0) 100%);
 
-$color-header-background: $color-light;
+$color-header-background: rgba($color-light, 0.3);
 $color-footer-background: $color-text;
 
+// Темная тема
+$color-dark-theme-accent-dark-bg: color.adjust($color-accent-dark, $lightness: -10%);
+$color-dark-theme-dark: $color-text-light;
+$color-dark-theme-light: #000000;
+$color-dark-theme-bg: #000909;
+$color-dark-theme-surface: #2d2d2d;
+$color-dark-theme-text: $color-text-light;
+$color-dark-theme-text-light: #1a1a1a;
+$color-dark-theme-dark-border: #00c2b1;
+$box-shadow-dark-theme: 4px 4px 8px 0 rgba(0, 194, 177, 0.3);
+
+$color-dark-theme-content-background: #000c0c;
+$bg-gradient-dark: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, $color-dark-theme-content-background 9%, $color-dark-theme-content-background 91%, rgba(30, 30, 30, 0) 100%);
+
+$color-dark-theme-header-background: rgba($color-dark-theme-light, 0.3);
+$color-dark-theme-footer-background: $color-dark-theme-light;
+
+// Миксин для применения темной темы
+@mixin dark-theme {
+  --color-dark: #{$color-dark-theme-dark};
+  --color-light: #{$color-dark-theme-light};
+  --color-accent-bright: #{$color-accent-bright};
+  --color-accent-bright-d10: #{$color-accent-bright-d10};
+  --color-accent-dark: #{$color-accent-dark};
+  --color-accent-dark-d10: #{$color-accent-dark-d10};
+  --color-text: #{$color-dark-theme-text};
+  --color-text-light: #{$color-dark-theme-text-light};
+  --color-content-background: #{$color-dark-theme-content-background};
+  --bg-gradient: #{$bg-gradient-dark};
+  --color-header-background: #{$color-dark-theme-header-background};
+  --color-footer-background: #{$color-dark-theme-footer-background};
+  --color-dark-border: #{$color-dark-theme-dark-border};
+  --color-footer: #{$color-dark-theme-dark};
+  --color-accent-dark-bg: #{$color-dark-theme-accent-dark-bg};
+  --box-shadow : #{$box-shadow-dark-theme};
+}
+
+// Миксин для применения светлой темы
+@mixin light-theme {
+  --color-dark: #{$color-dark};
+  --color-light: #{$color-light};
+  --color-accent-bright: #{$color-accent-bright};
+  --color-accent-bright-d10: #{$color-accent-bright-d10};
+  --color-accent-dark: #{$color-accent-dark};
+  --color-accent-dark-d10: #{$color-accent-dark-d10};
+  --color-text: #{$color-text};
+  --color-text-light: #{$color-text-light};
+  --color-content-background: #{$color-content-background};
+  --bg-gradient: #{$bg-gradient};
+  --color-header-background: #{$color-header-background};
+  --color-footer-background: #{$color-footer-background};
+  --color-dark-border: #{$color-dark-border};
+  --color-footer: #{$color-light};
+  --color-accent-dark-bg: #{$color-accent-dark-bg};
+  --box-shadow : #{$box-shadow};
+
+}
+
+
+// Базовые переменные (оставляем как есть)
 $font-family: 'Trebuchet MS', Helvetica, sans-serif;
 $second-family: 'ProstoOne-Regular', Helvetica, sans-serif;
 

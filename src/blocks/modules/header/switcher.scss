@@ -1,0 +1,72 @@
+.theme-switch {
+  display: inline-block;
+  height: 3.4rem;
+  position: relative;
+  width: 7rem;
+  cursor: pointer;
+  margin-right: auto;
+
+  svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    fill: var(--color-text);
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .slider-sun {
+    left: 0.7rem;
+  }
+
+  .slider-moon {
+    right: 0.7rem;
+  }
+
+  input {
+    display: none;
+  }
+
+  &:hover {
+
+  }
+}
+
+.slider {
+  background-color: #cccccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+
+  &.round {
+    border-radius: 3.4rem;
+
+    &:before {
+      border-radius: 50%;
+    }
+  }
+
+  &:before {
+    background-color: var(--color-light);
+    bottom: 0.4rem;
+    content: "";
+    height: 2.6rem;
+    left: 0.4rem;
+    position: absolute;
+    transition: .4s;
+    width: 2.6rem;
+  }
+}
+
+input:checked + .slider {
+  background-color: var(--color-accent-dark);
+
+  &:before {
+    transform: translateX(3.6rem);
+  }
+}

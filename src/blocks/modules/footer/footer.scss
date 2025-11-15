@@ -3,7 +3,7 @@
 .footer {
   padding: 3rem 0;
   width: 100%;
-  background-image: $bg-gradient;
+  background-image: var(--bg-gradient);
 
   a {
     transition: color $transition;
@@ -20,7 +20,7 @@
 
   &__container {
     padding: 3rem;
-    background-color: $color-footer-background;
+    background-color: var(--color-footer-background);
     border-radius: $border-radius-big;
 
     @include breakpoint('tablet') {
@@ -33,7 +33,7 @@
     }
 
     * {
-      color: $color-light;
+      color: var(--color-footer);
     }
   }
 
@@ -131,7 +131,7 @@
     svg {
       use {
         transition: $transition;
-        fill: $color-light;
+        fill: var(--color-footer);
       }
     }
 
@@ -175,6 +175,6 @@
   }
 
   .simple-link:before, .simple-link:after {
-    border-color: $color-light;
+    border-color: var(--color-footer);
   }
 }

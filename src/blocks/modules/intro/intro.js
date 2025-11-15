@@ -1,3 +1,5 @@
+import {isDark} from "%modules%/header/header";
+
 document.addEventListener("DOMContentLoaded", function() {
     const canvas = document.getElementById("sphereCanvas");
     if (!canvas) return;
@@ -37,8 +39,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const time = Date.now() * 0.002;
         angleX = time * 0.1;
         angleY = time * 0.2;
-
-        ctx.fillStyle = "rgba(20,20,20, 0.8)";
+        const dotColor = isDark ? "rgba(255,255,255, 0.8)" : "rgba(20,20,20, 0.8)";
+        ctx.fillStyle = dotColor;
 
         // drow dots
         for (let p = 0; p < planes; p++) {

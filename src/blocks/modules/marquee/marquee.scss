@@ -14,13 +14,13 @@
     display: flex;
     overflow: hidden;
     user-select: none;
-    background-color: $color-text;
+    background-color: var(--color-text);
     padding: 1rem 0;
     gap: 3rem;
 
     &:first-child {
       border-radius: $border-radius-big $border-radius-big 0 0;
-      border-bottom: 2px dashed #E5E7EB;
+      border-bottom: 2px dashed var(--color-light);
       @include breakpoint('tablet') {
         border-radius: 0;
       }
@@ -58,7 +58,7 @@
     font-size: 1.8rem;
     text-transform: uppercase;
     line-height: 110%;
-    color: #fff;
+    color: var(--color-light);
     letter-spacing: 0.3rem;
 
     @include breakpoint('mobile') {
