@@ -18,30 +18,15 @@
 
 .scroll-animate {
   opacity: 0;
-  transition: opacity 1s ease, transform 1s ease;
+  transition-duration: 0.6s, 1s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0.1s;
+  transition-property: opacity, transform;
   will-change: opacity, transform;
 
   &_top {
     transform: translateY(50px);
     will-change: opacity, transform;
-  }
-
-  &_left {
-    transform: translateX(-50px);
-    will-change: opacity, transform;
-
-    @include breakpoint('mobile') {
-      transform: translateX(0) translateY(50px);
-    }
-  }
-
-  &_right {
-    transform: translateX(50px);
-    will-change: opacity, transform;
-
-    @include breakpoint('mobile') {
-      transform: translateX(0) translateY(50px);
-    }
   }
 
   &.visible {

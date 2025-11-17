@@ -16,11 +16,6 @@ h1, h2, h3, h4, h5, h6, ul, ol, p {
 
 * {
   box-sizing: border-box;
-  transition: color $transition,
-  border-color $transition,
-  box-shadow $transition,
-  fill $transition,
-  stroke $transition;
 
   &::selection {
     background-color: $color-accent-dark;
@@ -74,9 +69,7 @@ body {
   }
 
   &.net {
-    //background-image: url("../img/sprites/bg-grid-hero-m.svg");
-    background-image: linear-gradient(rgba(#adadad, 0.1) 2px, transparent 2px), linear-gradient(90deg, rgba(#adadad, 0.1) 2px, transparent 2px);
-    //background-size: contain;
+    background-image: var(--background-net);
   }
 }
 

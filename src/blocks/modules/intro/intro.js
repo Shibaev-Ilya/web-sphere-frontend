@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const time = Date.now() * 0.002;
         angleX = time * 0.1;
         angleY = time * 0.2;
-        const dotColor = isDark ? "rgba(255,255,255, 0.8)" : "rgba(20,20,20, 0.8)";
+        const dotColor = isDark ? "rgba(217,217,217, 1)" : "rgba(20,20,20, 0.8)";
         ctx.fillStyle = dotColor;
 
         // drow dots

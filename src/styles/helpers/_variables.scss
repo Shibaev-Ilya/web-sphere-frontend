@@ -13,6 +13,7 @@ $color-text: #141414;
 $color-text-light: #fafafa;
 $color-dark-border: #141414;
 $box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.3);
+$background-net: linear-gradient(rgba(#5b5b5b, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(#5b5b5b, 0.1) 1px, transparent 1px);
 
 $color-content-background: #F4F4F4;
 $bg-gradient: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, $color-content-background 9%, $color-content-background 91%, rgba(255, 255, 255, 0) 100%);
@@ -22,16 +23,16 @@ $color-footer-background: $color-text;
 
 // Темная тема
 $color-dark-theme-accent-dark-bg: color.adjust($color-accent-dark, $lightness: -10%);
-$color-dark-theme-dark: $color-text-light;
+$color-dark-theme-dark: #d9d9d9;
 $color-dark-theme-light: #000000;
-$color-dark-theme-bg: #000909;
 $color-dark-theme-surface: #2d2d2d;
-$color-dark-theme-text: $color-text-light;
+$color-dark-theme-text: #d9d9d9;
 $color-dark-theme-text-light: #1a1a1a;
 $color-dark-theme-dark-border: #00c2b1;
 $box-shadow-dark-theme: 4px 4px 8px 0 rgba(0, 194, 177, 0.3);
+$background-net-dark-theme: linear-gradient(rgba(#939393, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(#939393, 0.2) 1px, transparent 1px);
 
-$color-dark-theme-content-background: #000c0c;
+$color-dark-theme-content-background: #001212;
 $bg-gradient-dark: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, $color-dark-theme-content-background 9%, $color-dark-theme-content-background 91%, rgba(30, 30, 30, 0) 100%);
 
 $color-dark-theme-header-background: rgba($color-dark-theme-light, 0.3);
@@ -55,6 +56,7 @@ $color-dark-theme-footer-background: $color-dark-theme-light;
   --color-footer: #{$color-dark-theme-dark};
   --color-accent-dark-bg: #{$color-dark-theme-accent-dark-bg};
   --box-shadow : #{$box-shadow-dark-theme};
+  --background-net: #{$background-net-dark-theme};
 }
 
 // Миксин для применения светлой темы
@@ -75,9 +77,8 @@ $color-dark-theme-footer-background: $color-dark-theme-light;
   --color-footer: #{$color-light};
   --color-accent-dark-bg: #{$color-accent-dark-bg};
   --box-shadow : #{$box-shadow};
-
+  --background-net: #{$background-net};
 }
-
 
 // Базовые переменные (оставляем как есть)
 $font-family: 'Trebuchet MS', Helvetica, sans-serif;
@@ -86,6 +87,5 @@ $second-family: 'ProstoOne-Regular', Helvetica, sans-serif;
 $transition: 0.4s ease-in-out;
 $max-site-width: 1920px;
 $margin-container-alignment: 0 auto;
-
 $border-radius-big: 2rem;
 $border-radius-small: 1rem;

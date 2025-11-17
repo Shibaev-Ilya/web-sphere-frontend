@@ -23,7 +23,6 @@
       border: 2px solid var(--color-dark-border);
       margin: 0;
       background-image: linear-gradient(135deg, var(--color-light) 66%, var(--color-accent-dark-bg) 66%);;
-      transition: $transition;
       font-size: 2rem;
       border-radius: $border-radius-small;
       box-shadow: 4px 4px 0 0 var(--color-dark-border);
@@ -44,6 +43,7 @@
       display: flex;
       align-items: center;
       gap: 1rem;
+      letter-spacing: 0.02em;
 
       svg {
         width: 3rem;
