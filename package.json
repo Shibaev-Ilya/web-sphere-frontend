@@ -64,6 +64,7 @@
         "yargs": "^17.3.1"
     },
     "dependencies": {
+        "diff-match-patch": "^1.0.5",
         "gulp-babel": "^8.0.0",
         "webpack": "^5.70.0",
         "webpack-stream": "^7.0.0"

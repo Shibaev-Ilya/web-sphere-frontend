@@ -1,0 +1,99 @@
+@use 'src/styles/helpers/index' as *;
+
+.compare-tool {
+  padding-top: 2rem;
+  padding-bottom: 10rem;
+
+  &__inner {
+    display: grid;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    margin-top: 8rem;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include breakpoint('mobile') {
+      grid-template-columns: repeat(2, auto);
+      margin-top: 4rem;
+    }
+  }
+
+  &__item {
+    flex: 1;
+
+    label {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    textarea {
+      min-height: 15rem;
+      max-height: 40rem;
+    }
+
+    @include breakpoint('mobile') {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__submit-button {
+    justify-self: end;
+
+    @include breakpoint('mobile') {
+      font-size: 2rem;
+      width: 100%;
+    }
+  }
+
+  &__reset-button {
+    align-self: end;
+
+    @include breakpoint('mobile') {
+      font-size: 2rem;
+      width: 100%;
+    }
+  }
+
+  &__result {
+    margin-top: 4rem;
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+
+  &__stats {
+    margin-top: 4rem;
+    border-radius: $border-radius-small;
+    padding: 2rem;
+    border: 1px solid var(--color-text);
+    font-size: 1.8rem;
+    line-height: 2;
+    max-width: calc(50% - 1.5rem);
+  }
+
+  &__results {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  &__result-description {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+}
+.diff-deleted {
+  background-color: $color-accent-bright;
+  text-decoration: line-through;
+}
+.diff-inserted {
+  background-color: $color-accent-dark;
+}
+.diff-unchanged {
+  background-color: transparent;
+}
+.inline-block {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--color-text);
+}
