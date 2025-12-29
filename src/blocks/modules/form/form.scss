@@ -6,7 +6,8 @@ input[type="email"],
 input[type="tel"],
 input[type="search"],
 input[type="password"],
-textarea {
+textarea,
+output {
   border: 1px solid #a6a6a6;
   border-radius: $border-radius-small;
   padding: 2rem 2rem;

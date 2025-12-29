@@ -1,7 +1,7 @@
 import DiffMatchPatch from "diff-match-patch";
 
 const dmp = new DiffMatchPatch();
-
+const compareButton = document.querySelector(".js-compare");
 function compareTexts() {
     const text1 = document.getElementById("text1").value;
     const text2 = document.getElementById("text2").value;
@@ -55,6 +55,7 @@ function clearTexts() {
     document.getElementById("text2").value = "";
 }
 
-document.querySelector(".js-compare").addEventListener("click", compareTexts);
-
-document.querySelector(".js-reset").addEventListener("click", clearTexts);
+if (compareButton) {
+    document.querySelector(".js-compare").addEventListener("click", compareTexts);
+    document.querySelector(".js-reset").addEventListener("click", clearTexts);
+}

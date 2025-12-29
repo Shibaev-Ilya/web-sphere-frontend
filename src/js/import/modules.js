@@ -6,3 +6,4 @@ import "%modules%/cookie/cookie";
 import "%modules%/form/form";
 import "%modules%/animations/animation";
 import "%modules%/compare-tool/compare-tool";
+import "%modules%/translit/translit";
