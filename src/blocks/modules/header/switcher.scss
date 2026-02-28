@@ -1,3 +1,5 @@
+@use 'src/styles/helpers/index' as *;
+
 .theme-switch {
   display: inline-block;
   height: 3.4rem;
@@ -6,6 +8,16 @@
   cursor: pointer;
   margin-right: auto;
   z-index: 1;
+
+  @include breakpoint('tablet') {
+    margin-right: 4rem;
+    margin-left: auto;
+  }
+
+  @include breakpoint('mobile') {
+    margin-right: auto;
+    margin-left: auto;
+  }
 
   svg {
     position: absolute;
