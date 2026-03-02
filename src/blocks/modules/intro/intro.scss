@@ -4,40 +4,43 @@
   overflow: hidden;
 
   &__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 109rem;
     position: relative;
-
-    @include breakpoint('tablet') {
-      justify-content: flex-end;
-    }
+    display: flex;
   }
 
   &__title {
-    font-size: 4.2rem;
+    font-size: 10rem;
     text-transform: uppercase;
     font-family: $second-family;
     font-weight: 600;
     letter-spacing: 0.1em;
     margin-bottom: 0;
+
+    @include breakpoint('mobile') {
+      font-size: 5rem
+    }
   }
 
   &__subtitle {
-    font-size: 2.4rem;
+    font-size: 5rem;
     font-family: $second-family;
     margin-bottom: 0;
+
+    @include breakpoint('mobile') {
+      font-size: 3rem
+    }
   }
 
   &__text-block {
     z-index: 1;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    height: fit-content;
+
     @include breakpoint('tablet') {
-      position: absolute;
       left: 2rem;
-      bottom: 0;
-      top: 0;
-      margin: auto;
       width: fit-content;
       height: fit-content;
     }
@@ -51,16 +54,14 @@
 }
 
 .sphere-canvas {
-  width: 65rem;
-  height: 65rem;
+  width: 69rem;
+  height: 69rem;
   position: relative;
+  margin-left: auto;
+  right: -5rem;
 
-  @include breakpoint('tablet') {
-    right: -5rem;
-
-  }
   @include breakpoint('mobile') {
-    right: -31rem;
+    right: -14rem;
     width: 60rem;
     height: 60rem;
 

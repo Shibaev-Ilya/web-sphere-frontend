@@ -21,22 +21,23 @@
   &__item {
     display: flex;
     flex-direction: column;
-    @include custom-border($border-radius-small, var(--color-dark-border));
+    box-shadow: 4px 4px 0 0 var(--color-dark-border);
+    border-radius: $border-radius-small;
+    border: 2px solid var(--color-dark-border);
     background-color: var(--color-light);
     position: relative;
     overflow: hidden;
     will-change: outline;
     cursor: pointer;
+    transition: box-shadow $transition, transform $transition;
 
     @media (hover: hover) {
       &:hover {
+        box-shadow: 5px 5px 0 0 var(--color-dark-border);
+        transform: translate3d( -1px, -1px, 0);
 
         .header-3 {
           color: $color_accent-dark;
-        }
-
-        .services__landings-img {
-          transform: scale(1.05);
         }
       }
     }
